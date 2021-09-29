@@ -1,0 +1,542 @@
+[
+    {
+        "name":"Anji Mito",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Axl Low",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Chipp Zanuff",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Faust",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Giovanna",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"I-No",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Ky Kiske",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Leo Whitefang",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"May",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Millia Rage",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Nagoriyuki",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Potemkin",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Ramlethal Valentine",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Sol Badguy",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "Command Normal 1",
+                    "buttons" : "6 + P"
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "Gun Flame",
+                    "buttons": "236 + P"
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"Tyrant Rave",
+                    "buttons" : "41236 + H"
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Zato-1",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Goldlewis Dickinson",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"Jack-O'",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "name":"",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "name": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "name":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    }
+]
