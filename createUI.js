@@ -30,24 +30,10 @@ function createCharsList(chars) {
 async function fetchJson(filename, func) {
     let response = await fetch(filename);
     let data = await response.json();
-    // console.log(data);
     func(data);
-    // data.forEach(char => {
-    //     const newDiv = document.createElement("div");
-    //     const newName = document.createElement("p");
-    //     const newText = document.createTextNode(`${char.name}`);
-    //     newName.appendChild(newText);
-    //     newDiv.appendChild(newName);
-    //     let newImg = document.createElement("img");
-    //     newImg.src = `${char.img}`;
-    //     newDiv.appendChild(newImg);
-    //     const charSection = document.getElementById("characters");
-    //     console.log(`charSection: ${charSection}`);
-    //     charSection.appendChild(newDiv);
-    // });
 }
 
-addCharacter();
+// addCharacter();
 
 fetchJson("gg-strive-chars.json", createCharsList);
 fetchJson("gg-strive.json", console.log);
