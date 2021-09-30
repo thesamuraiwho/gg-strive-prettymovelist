@@ -5,24 +5,59 @@
         "moves": {
             "normals" : [
                 {
-                    "name": "",
-                    "buttons" : ""
+                    "name": "Command Normal 1",
+                    "buttons" : "6 + P"
                 },
-                {}
+                {
+                    "name": "Command Normal 2",
+                    "buttons" : "6 + H"
+                }
             ],
             "specials" : [
                 {
-                    "name": "",
-                    "buttons": ""
+                    "name": "Shitsu",
+                    "buttons": "236 + P"
                 },
-                {}
+                {
+                    "name": "Suigetsu no Hakobi",
+                    "buttons": "236 + K (hold)"
+                },                
+                {
+                    "name": "Fuujin",
+                    "buttons": "236 + H (hold)",
+                    "followup": [
+                        {
+                            "name": "Shin: Ichishiki",
+                            "buttons": "P"
+                        },
+                        {
+                            "name": "Issokutobi",
+                            "buttons": "K"
+                        },
+                        {
+                            "name": "Nagiha",
+                            "buttons": "S"
+                        },
+                        {
+                            "name": "Rin",
+                            "buttons": "H"
+                        }
+                    ]
+                },               
+                {
+                    "name": "Kou",
+                    "buttons": "236 + S (hold)"
+                }
             ],
             "overdrives": [
                 {
-                    "name":"",
-                    "buttons" : ""
+                    "name": "Issei Ougi: Sai",
+                    "buttons": "63214 + H"
                 },
-                {}
+                {
+                    "name": "Kachoufuugetsu Kai",
+                    "buttons": "63214 + S"
+                }
             ]
         }
     },
@@ -35,7 +70,14 @@
                     "name": "",
                     "buttons" : ""
                 },
-                {}
+                {
+                    "name": "",
+                    "buttons" : ""
+                },
+                {
+                    "name": "",
+                    "buttons" : ""
+                }
             ],
             "specials" : [
                 {
