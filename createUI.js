@@ -11,12 +11,33 @@ function addCharacter() {
     charSection.appendChild(newDiv);
 }
 
+async function fetchJson(filename) {
+    let response = await fetch(filename);
+    let data = await response.json();
+    console.log(data)
+
+    data.forEach(char => {
+        const newDiv = document.createElement("div");
+        const newName = document.createElement("p");
+        const newText = document.createTextNode(`${char.name}`);
+        newName.appendChild(newText);
+        newDiv.appendChild(newName);
+        let newImg = document.createElement("img");
+        newImg.src = `${char.img}`;
+        newDiv.appendChild(newImg);
+        const charSection = document.getElementById("characters");
+        console.log(`charSection: ${charSection}`);
+        charSection.appendChild(newDiv);
+    });
+}
+
 addCharacter();
 
-fetch('gg-strive-chars.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        chars = data;
-    });
-// console.log(chars.length);
+fetchJson("gg-strive-chars.json");
+
+// fetch('gg-strive-chars.json')
+//     .then(response => chars = response.json());
+    // .then(data => {
+    //     console.log(data);
+    //     return data;
+    // });
