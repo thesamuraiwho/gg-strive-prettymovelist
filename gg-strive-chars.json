@@ -1,70 +1,70 @@
 [ 
     {
-        "name": "ANJI",
+        "displayname": "ANJI",
         "img": "assets/char-imgs/anji.jpg"
     },
     {
-        "name": "AXL",
+        "displayname": "AXL",
         "img": "assets/char-imgs/axl.jpg"
     },
     {
-        "name": "CHIPP",
+        "displayname": "CHIPP",
         "img": "assets/char-imgs/chipp.jpg"
     },
     {
-        "name": "FAUST",
+        "displayname": "FAUST",
         "img": "assets/char-imgs/faust.jpg"
     },
     {
-        "name": "GIOVANNA",
+        "displayname": "GIOVANNA",
         "img": "assets/char-imgs/giovanna.jpg"
     },
     {
-        "name": "GOLDLEWIS",
+        "displayname": "GOLDLEWIS",
         "img": "assets/char-imgs/goldlewis.jpg"
     },
     {
-        "name": "I-NO",
+        "displayname": "I-NO",
         "img": "assets/char-imgs/i-no.jpg"
     },
     {
-        "name": "JACK-O'",
+        "displayname": "JACK-O'",
         "img": "assets/char-imgs/gg-placeholder.jpg"
     },
     {
-        "name": "KY",
+        "displayname": "KY",
         "img": "assets/char-imgs/ky.jpg"
     },
     {
-        "name": "LEO",
+        "displayname": "LEO",
         "img": "assets/char-imgs/leo.jpg"
     },
     {
-        "name": "MAY",
+        "displayname": "MAY",
         "img": "assets/char-imgs/may.jpg"
     },
     {
-        "name": "MILLIA",
+        "displayname": "MILLIA",
         "img": "assets/char-imgs/millia.jpg"
     },    
     {
-        "name": "NAGORIYUKI",
+        "displayname": "NAGORIYUKI",
         "img": "assets/char-imgs/nagoriyuki.jpg"
     },    
     {
-        "name": "POTEMKIN",
+        "displayname": "POTEMKIN",
         "img": "assets/char-imgs/potemkin.jpg"
     },
     {
-        "name": "RAMLETHAL",
+        "displayname": "RAMLETHAL",
         "img": "assets/char-imgs/ramlethal.jpg"
     },
     {
-        "name": "SOL",
-        "img": "https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive.jpg"
+        "displayname": "SOL",
+        "img": "assets/char-imgs/sol.jpg"
     },
     {
-        "name": "ZATO", 
+        "displayname": "ZATO", 
         "img": "assets/char-imgs/zato.jpg"
     }
 ]

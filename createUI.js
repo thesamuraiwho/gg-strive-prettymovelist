@@ -32,7 +32,7 @@ function createCharsList(chars) {
 
         newLabel.appendChild(newRadio);
         const newName = document.createElement("p");
-        const newText = document.createTextNode(`${char.name}`);
+        const newText = document.createTextNode(`${char.displayname}`);
         newName.appendChild(newText);
         newLabel.appendChild(newName);
         let newImg = document.createElement("img");
@@ -62,7 +62,6 @@ function createMoveList(char, moves) {
     }
 
     createMove(moveList);
-
 }
 
 async function fetchJson(filename, func) {
@@ -73,7 +72,8 @@ async function fetchJson(filename, func) {
 
 // addCharacter();
 
-fetchJson("gg-strive-chars.json", createCharsList);
+// fetchJson("gg-strive-chars.json", createCharsList);
+fetchJson("gg-strive.json", createCharsList);
 fetchJson("gg-strive.json", console.log);
 
 // document.getElementsByName("chars").onclick = () => {

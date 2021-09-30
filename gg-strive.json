@@ -1,94 +1,98 @@
 [
     {
-        "name":"Anji Mito",
+        "displayname": "ANJI",
+        "img": "assets/char-imgs/anji.jpg",
+        "fullname":"Anji Mito",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "Command Normal 1",
+                    "movename": "Command Normal 1",
                     "buttons" : "6 + P"
                 },
                 {
-                    "name": "Command Normal 2",
+                    "movename": "Command Normal 2",
                     "buttons" : "6 + H"
                 }
             ],
             "specials" : [
                 {
-                    "name": "Shitsu",
+                    "movename": "Shitsu",
                     "buttons": "236 + P"
                 },
                 {
-                    "name": "Suigetsu no Hakobi",
+                    "movename": "Suigetsu no Hakobi",
                     "buttons": "236 + K (hold)"
                 },                
                 {
-                    "name": "Fuujin",
+                    "movename": "Fuujin",
                     "buttons": "236 + H (hold)",
                     "followup": [
                         {
-                            "name": "Shin: Ichishiki",
+                            "movename": "Shin: Ichishiki",
                             "buttons": "P"
                         },
                         {
-                            "name": "Issokutobi",
+                            "movename": "Issokutobi",
                             "buttons": "K"
                         },
                         {
-                            "name": "Nagiha",
+                            "movename": "Nagiha",
                             "buttons": "S"
                         },
                         {
-                            "name": "Rin",
+                            "movename": "Rin",
                             "buttons": "H"
                         }
                     ]
                 },               
                 {
-                    "name": "Kou",
+                    "movename": "Kou",
                     "buttons": "236 + S (hold)"
                 }
             ],
             "overdrives": [
                 {
-                    "name": "Issei Ougi: Sai",
+                    "movename": "Issei Ougi: Sai",
                     "buttons": "63214 + H"
                 },
                 {
-                    "name": "Kachoufuugetsu Kai",
+                    "movename": "Kachoufuugetsu Kai",
                     "buttons": "63214 + S"
                 }
             ]
         }
     },
     {
-        "name":"Axl Low",
+        "displayname": "AXL",
+        "img": "assets/char-imgs/axl.jpg",
+        "fullname":"Axl Low",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 }
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -96,26 +100,28 @@
         }
     },
     {
-        "name":"Chipp Zanuff",
+        "displayname": "CHIPP",
+        "img": "assets/char-imgs/chipp.jpg",
+        "fullname":"Chipp Zanuff",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -123,26 +129,28 @@
         }
     },
     {
-        "name":"Faust",
+        "displayname": "FAUST",
+        "img": "assets/char-imgs/faust.jpg",
+        "fullname":"Faust",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -150,26 +158,28 @@
         }
     },
     {
-        "name":"Giovanna",
+        "displayname": "GIOVANNA",
+        "img": "assets/char-imgs/giovanna.jpg",
+        "fullname":"Giovanna",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -177,26 +187,28 @@
         }
     },
     {
-        "name":"I-No",
+        "displayname": "GOLDLEWIS",
+        "img": "assets/char-imgs/goldlewis.jpg",
+        "fullname":"Goldlewis Dickinson",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -204,26 +216,28 @@
         }
     },
     {
-        "name":"Ky Kiske",
+        "displayname": "I-NO",
+        "img": "assets/char-imgs/i-no.jpg",
+        "fullname":"I-No",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -231,26 +245,28 @@
         }
     },
     {
-        "name":"Leo Whitefang",
+        "displayname": "JACK-O'",
+        "img": "assets/char-imgs/gg-placeholder.jpg",
+        "fullname":"Jack-O'",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -258,26 +274,28 @@
         }
     },
     {
-        "name":"May",
+        "displayname": "KY",
+        "img": "assets/char-imgs/ky.jpg",
+        "fullname":"Ky Kiske",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -285,26 +303,28 @@
         }
     },
     {
-        "name":"Millia Rage",
+        "displayname": "LEO",
+        "img": "assets/char-imgs/leo.jpg",
+        "fullname":"Leo Whitefang",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -312,26 +332,28 @@
         }
     },
     {
-        "name":"Nagoriyuki",
+        "displayname": "MAY",
+        "img": "assets/char-imgs/may.jpg",
+        "fullname":"May",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -339,26 +361,28 @@
         }
     },
     {
-        "name":"Potemkin",
+        "displayname": "MILLIA",
+        "img": "assets/char-imgs/millia.jpg",
+        "fullname":"Millia Rage",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -366,26 +390,28 @@
         }
     },
     {
-        "name":"Ramlethal Valentine",
+        "displayname": "NAGORIYUKI",
+        "img": "assets/char-imgs/nagoriyuki.jpg",
+        "fullname":"Nagoriyuki",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -393,26 +419,86 @@
         }
     },
     {
-        "name":"Sol Badguy",
+        "displayname": "POTEMKIN",
+        "img": "assets/char-imgs/potemkin.jpg",
+        "fullname":"Potemkin",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "Command Normal 1",
+                    "movename": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "movename": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "movename":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "displayname": "RAMLETHAL",
+        "img": "assets/char-imgs/ramlethal.jpg",
+        "fullname":"Ramlethal Valentine",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "movename": "",
+                    "buttons" : ""
+                },
+                {}
+            ],
+            "specials" : [
+                {
+                    "movename": "",
+                    "buttons": ""
+                },
+                {}
+            ],
+            "overdrives": [
+                {
+                    "movename":"",
+                    "buttons" : ""
+                },
+                {}
+            ]
+        }
+    },
+    {
+        "displayname": "SOL",
+        "img": "assets/char-imgs/sol.jpg",
+        "fullname":"Sol Badguy",
+        "stats": {},
+        "moves": {
+            "normals" : [
+                {
+                    "movename": "Command Normal 1",
                     "buttons" : "6 + P"
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "Gun Flame",
+                    "movename": "Gun Flame",
                     "buttons": "236 + P"
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"Tyrant Rave",
+                    "movename":"Tyrant Rave",
                     "buttons" : "41236 + H"
                 },
                 {}
@@ -420,26 +506,28 @@
         }
     },
     {
-        "name":"Zato-1",
+        "displayname": "ZATO", 
+        "img": "assets/char-imgs/zato.jpg",
+        "fullname":"Zato-1",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
@@ -447,80 +535,28 @@
         }
     },
     {
-        "name":"Goldlewis Dickinson",
+        "displayname": "template", 
+        "img": "assets/char-imgs/gg-placeholder.jpg",
+        "fullname":"",
         "stats": {},
         "moves": {
             "normals" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons" : ""
                 },
                 {}
             ],
             "specials" : [
                 {
-                    "name": "",
+                    "movename": "",
                     "buttons": ""
                 },
                 {}
             ],
             "overdrives": [
                 {
-                    "name":"",
-                    "buttons" : ""
-                },
-                {}
-            ]
-        }
-    },
-    {
-        "name":"Jack-O'",
-        "stats": {},
-        "moves": {
-            "normals" : [
-                {
-                    "name": "",
-                    "buttons" : ""
-                },
-                {}
-            ],
-            "specials" : [
-                {
-                    "name": "",
-                    "buttons": ""
-                },
-                {}
-            ],
-            "overdrives": [
-                {
-                    "name":"",
-                    "buttons" : ""
-                },
-                {}
-            ]
-        }
-    },
-    {
-        "name":"",
-        "stats": {},
-        "moves": {
-            "normals" : [
-                {
-                    "name": "",
-                    "buttons" : ""
-                },
-                {}
-            ],
-            "specials" : [
-                {
-                    "name": "",
-                    "buttons": ""
-                },
-                {}
-            ],
-            "overdrives": [
-                {
-                    "name":"",
+                    "movename":"",
                     "buttons" : ""
                 },
                 {}
