@@ -19,6 +19,11 @@ function createCharsList(chars) {
         newRadio.name = "chars";
         newRadio.id = char.name;
         newRadio.value = char.name;
+        newRadio.onclick = () => {
+            if (newRadio.checked) {
+                console.log(newRadio.value);
+            }
+        };
 
         // Temporary default value. Should be the first value of a sorted list or something.
         if(char.name === "ANJI") {
@@ -32,6 +37,7 @@ function createCharsList(chars) {
         newLabel.appendChild(newName);
         let newImg = document.createElement("img");
         newImg.src = `${char.img}`;
+        newImg.className = "char-thumbnail";
         newLabel.appendChild(newImg);
         const newBreak = document.createElement("br");
         newLabel.appendChild(newBreak);
@@ -70,8 +76,6 @@ async function fetchJson(filename, func) {
 fetchJson("gg-strive-chars.json", createCharsList);
 fetchJson("gg-strive.json", console.log);
 
-document.getElementsByName("chars").onclick = () => {
-    
-}
-
-console.log(`char selection: ${document.querySelector('input[name="chars"]:checked')}`);
+// document.getElementsByName("chars").onclick = () => {
+//     console.log(`char selection: ${document.querySelector('input[name="chars"]:checked')}`);
+// }

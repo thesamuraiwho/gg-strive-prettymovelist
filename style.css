@@ -4,3 +4,10 @@ header {
     top: 0;
     left: 0;
 }
+
+.char-thumbnail {
+    width: 25%;
+    height: 25%;
+    border: 5px solid;
+    color: orange;
+}
