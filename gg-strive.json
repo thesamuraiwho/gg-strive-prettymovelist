@@ -484,59 +484,5 @@
                 {}
             ]
         }
-    },
-    {
-        "name":"",
-        "stats": {},
-        "moves": {
-            "normals" : [
-                {
-                    "name": "",
-                    "buttons" : ""
-                },
-                {}
-            ],
-            "specials" : [
-                {
-                    "name": "",
-                    "buttons": ""
-                },
-                {}
-            ],
-            "overdrives": [
-                {
-                    "name":"",
-                    "buttons" : ""
-                },
-                {}
-            ]
-        }
-    },
-    {
-        "name":"",
-        "stats": {},
-        "moves": {
-            "normals" : [
-                {
-                    "name": "",
-                    "buttons" : ""
-                },
-                {}
-            ],
-            "specials" : [
-                {
-                    "name": "",
-                    "buttons": ""
-                },
-                {}
-            ],
-            "overdrives": [
-                {
-                    "name":"",
-                    "buttons" : ""
-                },
-                {}
-            ]
-        }
     }
 ]
