@@ -1,0 +1,70 @@
+[ 
+    {
+        "name": "ANJI",
+        "img": "assets/char-imgs/anji.jpg"
+    },
+    {
+        "name": "AXL",
+        "img": "assets/char-imgs/axl.jpg"
+    },
+    {
+        "name": "CHIPP",
+        "img": "assets/char-imgs/chipp.jpg"
+    },
+    {
+        "name": "FAUST",
+        "img": "assets/char-imgs/faust.jpg"
+    },
+    {
+        "name": "GIOVANNA",
+        "img": "assets/char-imgs/giovanna.jpg"
+    },
+    {
+        "name": "GOLDLEWIS",
+        "img": "assets/char-imgs/goldlewis.jpg"
+    },
+    {
+        "name": "I-NO",
+        "img": "assets/char-imgs/i-no.jpg"
+    },
+    {
+        "name": "JACK-O'",
+        "img": ""
+    },
+    {
+        "name": "KY",
+        "img": "assets/char-imgs/ky.jpg"
+    },
+    {
+        "name": "LEO",
+        "img": "assets/char-imgs/leo.jpg"
+    },
+    {
+        "name": "MAY",
+        "img": "assets/char-imgs/may.jpg"
+    },
+    {
+        "name": "MILLIA",
+        "img": "assets/char-imgs/millia.jpg"
+    },    
+    {
+        "name": "NAGORIYUKI",
+        "img": "assets/char-imgs/nagoriyuki.jpg"
+    },    
+    {
+        "name": "POTEMKIN",
+        "img": "assets/char-imgs/potemkin.jpg"
+    },
+    {
+        "name": "RAMLETHAL",
+        "img": "assets/char-imgs/ramlethal.jpg"
+    },
+    {
+        "name": "SOL",
+        "img": "https://www.guiltygear.com/ggst/en/wordpress/wp-content/uploads/2020/09/archive.jpg"
+    },
+    {
+        "name": "ZATO", 
+        "img": "assets/char-imgs/zato.jpg"
+    }
+]
