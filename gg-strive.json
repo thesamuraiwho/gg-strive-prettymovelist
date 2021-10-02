@@ -71,31 +71,63 @@
         "moves": {
             "normals" : [
                 {
-                    "moveName": "",
-                    "buttons" : ""
+                    "moveName": "Command Normal 1",
+                    "buttons" : "6 + P"
                 },
                 {
-                    "moveName": "",
-                    "buttons" : ""
+                    "moveName": "Command Normal 2",
+                    "buttons" : "6 + K"
                 },
                 {
-                    "moveName": "",
-                    "buttons" : ""
+                    "moveName": "Command Normal 3",
+                    "buttons" : "6 + H"
                 }
             ],
             "specials" : [
                 {
-                    "moveName": "",
-                    "buttons": ""
+                    "moveName": "Sickle Flash",
+                    "buttons": "4 Hold > 6 + S",
+                    "followup": [
+                        {
+                            "moveName": "Soaring Chain Strike",
+                            "buttons": "8"
+                        },
+                        {
+                            "moveName": "Spinning Chain Strike",
+                            "buttons": "2 Hold"
+                        },
+                        {
+                            "moveName": "Winter Cherry",
+                            "buttons": "S"
+                        }
+                    ]
                 },
-                {}
+                {
+                    "moveName": "Winter Mantis",
+                    "buttons": "41236 + H"
+                },
+                {
+                    "moveName": "Snail",
+                    "buttons": "(Air) 214 + H"
+                },
+                {
+                    "moveName": "Rainwater",
+                    "buttons": "214 + S"
+                },
+                {
+                    "moveName": "Axl Bomber",
+                    "buttons": "Air 623 + H"
+                }
             ],
             "overdrives": [
                 {
-                    "moveName":"",
-                    "buttons" : ""
+                    "moveName": "Sickle Storm",
+                    "buttons" : "236 + 236 + H"
                 },
-                {}
+                {
+                    "moveName": "One Vision",
+                    "buttons" : "63214 > 6 + P"
+                }
             ]
         }
     },
@@ -107,24 +139,83 @@
         "moves": {
             "normals" : [
                 {
-                    "moveName": "",
-                    "buttons" : ""
+                    "moveName": "Command Normal 1",
+                    "buttons" : "6 + P"
                 },
-                {}
+                {
+                    "moveName": "Command Normal 2",
+                    "buttons" : "6 + K"
+                },
+                {
+                    "moveName": "Command Normal 3",
+                    "buttons" : "6 + H"
+                },
+                {
+                    "moveName": "Command Normal 4",
+                    "buttons" : "Air 2 + K"
+                }
             ],
             "specials" : [
                 {
-                    "moveName": "",
-                    "buttons": ""
+                    "moveName": "Alpha Blade (Horizontal)",
+                    "buttons": "(Air) 236 + P"
                 },
-                {}
+                {
+                    "moveName": "Alpha Blade (Diagonal)",
+                    "buttons": "(Air) 236 + K"
+                },
+                {
+                    "moveName": "Beta Blade",
+                    "buttons": "(Air) 623 + S"
+                },
+                {
+                    "moveName": "Gamma Blade",
+                    "buttons": "236 + H"
+                },
+                {
+                    "moveName": "Resshou",
+                    "buttons": "236 + S"
+                },
+                {
+                    "moveName": "Rokusai",
+                    "buttons": "(Resshou) 236 + S"
+                },
+                {
+                    "moveName": "Senshuu",
+                    "buttons": "(Resshou or Rokusai) 236 + K"
+                },
+                {
+                    "moveName": "Genrouzan",
+                    "buttons": "63214 + S"
+                },
+                {
+                    "moveName": "Shuriken",
+                    "buttons": "Air 214 + P"
+                },
+                {
+                    "moveName": "Wall Run",
+                    "buttons": "Hold 6 dashing near corner",
+                    "followup": [
+                        {
+                            "moveName": "Attack",
+                            "buttons" : "any normal except D"
+                        },
+                        {
+                            "moveName": "Escape",
+                            "buttons" : "4 or 2"
+                        }
+                    ]
+                }
             ],
             "overdrives": [
                 {
-                    "moveName":"",
-                    "buttons" : ""
+                    "moveName": "Zansei Rouga",
+                    "buttons" : "(Air) 63214 > 6 + H"
                 },
-                {}
+                {
+                    "moveName": "Banki Messai",
+                    "buttons" : "236 + 236 + K"
+                }
             ]
         }
     },
@@ -136,24 +227,79 @@
         "moves": {
             "normals" : [
                 {
-                    "moveName": "",
-                    "buttons" : ""
+                    "moveName": "Command Movement",
+                    "buttons" : "1 or 3"
                 },
-                {}
+                {
+                    "moveName": "Command Normal 1",
+                    "buttons" : "6 + P"
+                },
+                {
+                    "moveName": "Command Normal 2",
+                    "buttons" : "6 + H"
+                },
+                {
+                    "moveName": "Command Normal 3",
+                    "buttons" : "H during standing H"
+                },
+                {
+                    "moveName": "Command Normal 4",
+                    "buttons" : "Air 2 + K"
+                },
+                {
+                    "moveName": "Command Normal 5",
+                    "buttons" : "D Hold"
+                }
             ],
             "specials" : [
                 {
-                    "moveName": "",
-                    "buttons": ""
+                    "moveName": "Mix Mix Mix",
+                    "buttons": "(Air) 236 + S"
                 },
-                {}
+                {
+                    "moveName": "What Could This Be?",
+                    "buttons": "236 + P"
+                },
+                {
+                    "moveName": "Snip Snip Snip",
+                    "buttons": "236 + H"
+                },
+                {
+                    "moveName": "Scarecrow",
+                    "buttons": "214 + P or K or S Hold"
+                },
+                {
+                    "moveName": "Thrust",
+                    "buttons": "41236 + K",
+                    "followup": [
+                        {
+                            "moveName": "Pull Back",
+                            "buttons": "4"
+                        },
+                        {
+                            "moveName": "Hole in One!",
+                            "buttons": "H"
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Love",
+                    "buttons": "Air 236 + P"
+                }
             ],
             "overdrives": [
                 {
-                    "moveName":"",
-                    "buttons" : ""
+                    "moveName": "Bone-crushing Excitement",
+                    "buttons" : "63214 > 6 + H"
                 },
-                {}
+                {
+                    "moveName": "W-W-What Could This Be?",
+                    "buttons" : "236 + 236 + P"
+                },
+                {
+                    "moveName": "W-W-W-What Could This Be?",
+                    "buttons" : "Max 236 + 236 + 236 + P"
+                }
             ]
         }
     },
