@@ -42,7 +42,7 @@ print(mainContent.contents[115])
 print(mainContent.contents[115].contents)
 print(type(mainContent.contents[115]))
 # Create a matching tag but something is different
-soup = BeautifulSoup()
+# soup = BeautifulSoup()
 para = soup.new_tag("p")
 br = soup.new_tag("br")
 para.append(br)
@@ -62,7 +62,7 @@ print(f"len of mainContent: {len(mainContent.contents)}")
 
 # Removing this element: <div style="clear: both;"></div>
 
-soup = BeautifulSoup()
+# soup = BeautifulSoup()
 clearDiv = soup.new_tag("div")
 clearDiv['style'] = "clear: both;"
 print(clearDiv)
@@ -98,11 +98,95 @@ print(mainContent.contents[66].__dict__.keys())
 mainContent.contents = [i for i in mainContent.contents if i.names != "div" and i.attrs != {'class': ['floatright']}]
 print(f"len of mainContent: {len(mainContent.contents)}")
 
-for i in range(len(mainContent.contents)):
-    print(f"{i}\t{mainContent.contents[i]}\n\n")
+# for i in range(len(mainContent.contents)):
+#     print(f"{i}\t{mainContent.contents[i]}\n\n")
 
 baseChars = mainContent.contents[:45]
 dlcChars = mainContent.contents[46:]
+
+charName = dlcChars[0].contents[0]["id"]
+charMoves = {"normals": [], "specials": [], "overdrives": []}
+
+# Normals and Specials
+print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
+
+# for i in range(len(dlcChars[1].contents)):
+#     print(f"{i}\n{dlcChars[1].contents[i]}\n\n")
+
+# Overdrives
+print("Overdrives")
+# print(f"{2}\t{dlcChars[2]}\n\n{dlcChars[2].contents}\n\n{len(dlcChars[2].contents)}\n\n")
+
+# for i in range(len(dlcChars[2].contents)):
+#     if(dlcChars[2].contents[i] != "\n"):
+#         print(f"{i}\n{dlcChars[2].contents[i]}\n\n")
+#         print(f"{dlcChars[2].contents[i].contents}\nlen: {len(dlcChars[2].contents[i].contents)}")
+#         for j in range(len(dlcChars[2].contents[i].contents)):
+#             if(dlcChars[2].contents[i].contents[j] != "\n"):
+#                 print(f"{dlcChars[2].contents[i].contents[j]}\n\n")
+
+# print([i for i in dlcChars[2].contents if i != "\n"])
+# print("\n\n")
+
+# Finding move names and move commands
+# for child in [i for i in dlcChars[2].contents if i != "\n"]:
+#     # if child.name == "td":
+#     for d in child.descendants:
+#         # Use the "style" key to determine if a <td> is a name or commands
+#         if d.name == "td" and d.has_attr("style"):
+#             # print(f"{d}\n\n")
+#             if d['style'] == "text-align:left":
+#                 print(f"{d.text}\n\n")
+#             elif d['style'] == "text-align:right":
+#                 command = []
+#                 # print(d.contents)
+#                 for e in d.descendants:
+#                     if e.name == "img":
+#                         command.append(e['src'])
+#                     elif e.name == "b":
+#                         command.append(e.text)
+#                 print(command)
+
+for d in dlcChars[2].descendants:
+    # Use the "style" key to determine if a <td> is a name or commands
+    if d.name == "td" and d.has_attr("style"):
+        # print(f"{d}\n\n")
+        if d['style'] == "text-align:left":
+            print(f"{d.text}\n\n")
+        elif d['style'] == "text-align:right":
+            command = []
+            # print(d.contents)
+            for e in d.descendants:
+                if e.name == "img":
+                    command.append(e['src'])
+                elif e.name == "b":
+                    command.append(e.text)
+            print(command)
+
+print(f"charName: {charName}")
+
+# for i in range(len(dlcChars)):
+#     if(dlcChars[i].name == "h3"): # DLC character name
+#         print(f"{i}\t{dlcChars[i]}\n\n{dlcChars[i].contents}\n\n{dlcChars[i].contents[0]['id']}\n\n")
+#     else:
+#         print(f"{i}\t{dlcChars[i]}\n\n{dlcChars[i].contents}\n\n")
+
+
+# characters = {}
+# char = ""
+# for i in dlcChars:
+#     if i.name == "h3":
+#         characters['name'] = i.contents[0]['id']
+#         characters['moves'] = []
+#     else:
+
+
+
+
+
+
+
+
 
 # print(type(mainContent.contents[0]))
 
