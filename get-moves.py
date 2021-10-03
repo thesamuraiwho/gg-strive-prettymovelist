@@ -86,9 +86,8 @@ floatDiv["class"] = "floatright"
 print(floatDiv)
 
 print(mainContent.contents[66])
-print(f"\n\nmainContent.contents[66].name: {mainContent.contents[66].name}\n\nmainContent.contents[66].attrs: {mainContent.contents[66].attrs}")
+print(f"\n\nmainContent.contents[66].name: {mainContent.contents[66].name}\n\nmainContent.contents[66].attrs: {mainContent.contents[66].attrs}\n")
 # print(mainContent.contents[66].__dict__)
-print("\n\n")
 print(mainContent.contents[66].__dict__.keys())
 
 # for i in range(len(mainContent.contents)):
@@ -96,7 +95,7 @@ print(mainContent.contents[66].__dict__.keys())
 #       print(f"{i}\t{mainContent.contents[i]}\n\n")
 
 mainContent.contents = [i for i in mainContent.contents if i.names != "div" and i.attrs != {'class': ['floatright']}]
-print(f"len of mainContent: {len(mainContent.contents)}")
+print(f"len of mainContent: {len(mainContent.contents)}\n\n")
 
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}\n\n")
@@ -108,10 +107,30 @@ charName = dlcChars[0].contents[0]["id"]
 charMoves = {"normals": [], "specials": [], "overdrives": []}
 
 # Normals and Specials
-print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
+print("Normals and Specials")
+# print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
 
 # for i in range(len(dlcChars[1].contents)):
 #     print(f"{i}\n{dlcChars[1].contents[i]}\n\n")
+
+for d in dlcChars[1].descendants:
+    # Use the "style" key to determine if a <td> is a name or commands
+    if d.name == "td" and d.has_attr("style"):
+        # print(f"{d}\n\n")
+        if d['style'] == "text-align:left":
+            print(f"{d.text}\n")
+        elif d['style'] == "text-align:right":
+            command = []
+            # print(d.contents)
+            for e in d.descendants:
+                if e.name == "img":
+                    command.append(e['src'])
+                elif e.name == "b":
+                    command.append(e.text)
+            print(command)
+        elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
+            print(f"\n\n{d.text}\n\n")
+
 
 # Overdrives
 print("Overdrives")
@@ -152,7 +171,7 @@ for d in dlcChars[2].descendants:
     if d.name == "td" and d.has_attr("style"):
         # print(f"{d}\n\n")
         if d['style'] == "text-align:left":
-            print(f"{d.text}\n\n")
+            print(f"{d.text}\n")
         elif d['style'] == "text-align:right":
             command = []
             # print(d.contents)
@@ -162,6 +181,8 @@ for d in dlcChars[2].descendants:
                 elif e.name == "b":
                     command.append(e.text)
             print(command)
+        elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
+            print(f"\n\n{d.text}\n\n")
 
 print(f"charName: {charName}")
 
