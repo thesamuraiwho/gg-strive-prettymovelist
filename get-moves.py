@@ -14,17 +14,20 @@ soup = BeautifulSoup(req.text, "html.parser")
 # print(soup.title)
 # mainContent = soup.find("div", attrs={"id": "mw-content-text"})
 mainContent = soup.find("div", attrs={"class": "mw-parser-output"})
-print(mainContent.prettify())
-print(type(mainContent))
+# print(mainContent.prettify())
+# print(type(mainContent))
 
-print(mainContent.contents)
-print(len(mainContent.contents))
+# print(mainContent.contents)
+# print(len(mainContent.contents))
 
-# Removing the end of mainContent
-mainContent.contents = mainContent.contents[:223]
+# Removing the beginning and end of mainContent and getting the section with moves
+mainContent.contents = mainContent.contents[4:223]
 # for i in range(len(mainContent.contents)):
 #     if(mainContent.contents[i] == '\n'):
 #         print(f"{i}\t{mainContent.contents[i]}")
+
+# for i in range(5):
+#     print(f"{i}\t{mainContent.contents[i]}")
 
 # Removing the new lines
 mainContent.contents = [i for i in mainContent.contents if i != "\n"]
@@ -46,13 +49,60 @@ para.append(br)
 para.append("\n")
 print(para)
 
-for i in range(len(mainContent.contents)):
-    if(mainContent.contents[i] == para):
-        print(f"{i}\t{mainContent.contents[i]}")
+# for i in range(len(mainContent.contents)):
+#     if(mainContent.contents[i] == para):
+#         print(f"{i}\t{mainContent.contents[i]}")
 
 mainContent.contents = [i for i in mainContent.contents if i != para]
 
 print(f"len of mainContent: {len(mainContent.contents)}")
+
+# for i in range(len(mainContent.contents)):
+#     print(f"{i}\t{mainContent.contents[i]}\n\n")
+
+# Removing this element: <div style="clear: both;"></div>
+
+soup = BeautifulSoup()
+clearDiv = soup.new_tag("div")
+clearDiv['style'] = "clear: both;"
+print(clearDiv)
+
+# for i in range(len(mainContent.contents)):
+#     if(mainContent.contents[i] == clearDiv):
+#         print(f"{i}\t{mainContent.contents[i]}")
+
+mainContent.contents = [i for i in mainContent.contents if i != clearDiv]
+print(f"len of mainContent: {len(mainContent.contents)}")
+
+# for i in range(len(mainContent.contents)):
+#     print(f"{i}\t{mainContent.contents[i]}\n\n")
+
+# Removing the div with the character's thumbnail
+
+# <div class="floatright">
+
+floatDiv = soup.new_tag("div")
+floatDiv["class"] = "floatright"
+print(floatDiv)
+
+print(mainContent.contents[66])
+print(f"\n\nmainContent.contents[66].name: {mainContent.contents[66].name}\n\nmainContent.contents[66].attrs: {mainContent.contents[66].attrs}")
+# print(mainContent.contents[66].__dict__)
+print("\n\n")
+print(mainContent.contents[66].__dict__.keys())
+
+# for i in range(len(mainContent.contents)):
+#     if(mainContent.contents[i].name == "div" and mainContent.contents[i].attrs == {'class': ['floatright']}):
+#       print(f"{i}\t{mainContent.contents[i]}\n\n")
+
+mainContent.contents = [i for i in mainContent.contents if i.names != "div" and i.attrs != {'class': ['floatright']}]
+print(f"len of mainContent: {len(mainContent.contents)}")
+
+for i in range(len(mainContent.contents)):
+    print(f"{i}\t{mainContent.contents[i]}\n\n")
+
+baseChars = mainContent.contents[:45]
+dlcChars = mainContent.contents[46:]
 
 # print(type(mainContent.contents[0]))
 
