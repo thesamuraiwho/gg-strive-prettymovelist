@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
+from collections import OrderedDict
+
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -14,7 +16,7 @@ def findMoves(char, charMoves):
         if d.name == "td" and d.has_attr("style"):
             # print(f"{d}\n\n")
             if d['style'] == "text-align:left":
-                print(f"{d.text}\n")
+                # print(f"{d.text}\n")
                 moveName = d.text.strip()
             elif d['style'] == "text-align:right":
                 command = []
@@ -24,13 +26,13 @@ def findMoves(char, charMoves):
                         command.append(e['src'])
                     elif e.name == "b":
                         command.append(e.text)
-                print(f"{command}\n")
+                # print(f"{command}\n")
                 charMoves[moveType][moveName] = command
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
-                print(f"\n\n{(d.text).lower()}")
+                # print(f"\n\n{(d.text).lower()}")
                 moveType = (d.text).lower().strip()
     
-    print(charMoves)
+    pp.pprint(charMoves)
 
 site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
 req = requests.get(site)
@@ -131,26 +133,45 @@ print(f"len of mainContent: {len(mainContent.contents)}\n\n")
 baseChars = mainContent.contents[:45]
 dlcChars = mainContent.contents[46:]
 
-print(dlcChars)
+for i in range(len(dlcChars)):
+    print(f"{i}\t{dlcChars[i]}\n\n")
 
+chars = {}
+
+# Goldlewis
 charName = dlcChars[0].contents[0]["id"]
-charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
+# charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
+charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), "overdrives": OrderedDict()}
 
 # Normals and Specials
-print("Normals and Specials")
+# print("Normals and Specials")
 # print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
 
 findMoves(dlcChars[1], charMoves)
 
 # Overdrives
-print("Overdrives")
+# print("Overdrives")
 
 # Finding move names and move commands
 
 findMoves(dlcChars[2], charMoves)
 pp.pprint(charMoves)
 
+# print(f"charName: {charName}")
+
+chars[charName] = charMoves
+pp.pprint(chars)
+
+# Jack O'
+charName = dlcChars[3].contents[0]["id"]
 print(f"charName: {charName}")
+# charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
+charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), "overdrives": OrderedDict()}
+
+findMoves(dlcChars[4], charMoves)
+findMoves(dlcChars[5], charMoves)
+chars[charName] = charMoves
+pp.pprint(chars)
 
 # for i in range(len(dlcChars)):
 #     if(dlcChars[i].name == "h3"): # DLC character name
