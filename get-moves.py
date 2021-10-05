@@ -3,6 +3,34 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+
+def findMoves(char, charMoves):
+    moveType = ""
+    moveName = ""
+    for d in char.descendants:
+        # Use the "style" key to determine if a <td> is a name or commands
+        if d.name == "td" and d.has_attr("style"):
+            # print(f"{d}\n\n")
+            if d['style'] == "text-align:left":
+                print(f"{d.text}\n")
+                moveName = d.text.strip()
+            elif d['style'] == "text-align:right":
+                command = []
+                # print(d.contents)
+                for e in d.descendants:
+                    if e.name == "img":
+                        command.append(e['src'])
+                    elif e.name == "b":
+                        command.append(e.text)
+                print(f"{command}\n")
+                charMoves[moveType][moveName] = command
+            elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
+                print(f"\n\n{(d.text).lower()}")
+                moveType = (d.text).lower().strip()
+    
+    print(charMoves)
 
 site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
 req = requests.get(site)
@@ -103,86 +131,24 @@ print(f"len of mainContent: {len(mainContent.contents)}\n\n")
 baseChars = mainContent.contents[:45]
 dlcChars = mainContent.contents[46:]
 
+print(dlcChars)
+
 charName = dlcChars[0].contents[0]["id"]
-charMoves = {"normals": [], "specials": [], "overdrives": []}
+charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
 
 # Normals and Specials
 print("Normals and Specials")
 # print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
 
-# for i in range(len(dlcChars[1].contents)):
-#     print(f"{i}\n{dlcChars[1].contents[i]}\n\n")
-
-for d in dlcChars[1].descendants:
-    # Use the "style" key to determine if a <td> is a name or commands
-    if d.name == "td" and d.has_attr("style"):
-        # print(f"{d}\n\n")
-        if d['style'] == "text-align:left":
-            print(f"{d.text}\n")
-        elif d['style'] == "text-align:right":
-            command = []
-            # print(d.contents)
-            for e in d.descendants:
-                if e.name == "img":
-                    command.append(e['src'])
-                elif e.name == "b":
-                    command.append(e.text)
-            print(command)
-        elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
-            print(f"\n\n{d.text}\n\n")
-
+findMoves(dlcChars[1], charMoves)
 
 # Overdrives
 print("Overdrives")
-# print(f"{2}\t{dlcChars[2]}\n\n{dlcChars[2].contents}\n\n{len(dlcChars[2].contents)}\n\n")
-
-# for i in range(len(dlcChars[2].contents)):
-#     if(dlcChars[2].contents[i] != "\n"):
-#         print(f"{i}\n{dlcChars[2].contents[i]}\n\n")
-#         print(f"{dlcChars[2].contents[i].contents}\nlen: {len(dlcChars[2].contents[i].contents)}")
-#         for j in range(len(dlcChars[2].contents[i].contents)):
-#             if(dlcChars[2].contents[i].contents[j] != "\n"):
-#                 print(f"{dlcChars[2].contents[i].contents[j]}\n\n")
-
-# print([i for i in dlcChars[2].contents if i != "\n"])
-# print("\n\n")
 
 # Finding move names and move commands
-# for child in [i for i in dlcChars[2].contents if i != "\n"]:
-#     # if child.name == "td":
-#     for d in child.descendants:
-#         # Use the "style" key to determine if a <td> is a name or commands
-#         if d.name == "td" and d.has_attr("style"):
-#             # print(f"{d}\n\n")
-#             if d['style'] == "text-align:left":
-#                 print(f"{d.text}\n\n")
-#             elif d['style'] == "text-align:right":
-#                 command = []
-#                 # print(d.contents)
-#                 for e in d.descendants:
-#                     if e.name == "img":
-#                         command.append(e['src'])
-#                     elif e.name == "b":
-#                         command.append(e.text)
-#                 print(command)
 
-for d in dlcChars[2].descendants:
-    # Use the "style" key to determine if a <td> is a name or commands
-    if d.name == "td" and d.has_attr("style"):
-        # print(f"{d}\n\n")
-        if d['style'] == "text-align:left":
-            print(f"{d.text}\n")
-        elif d['style'] == "text-align:right":
-            command = []
-            # print(d.contents)
-            for e in d.descendants:
-                if e.name == "img":
-                    command.append(e['src'])
-                elif e.name == "b":
-                    command.append(e.text)
-            print(command)
-        elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
-            print(f"\n\n{d.text}\n\n")
+findMoves(dlcChars[2], charMoves)
+pp.pprint(charMoves)
 
 print(f"charName: {charName}")
 
@@ -200,41 +166,3 @@ print(f"charName: {charName}")
 #         characters['name'] = i.contents[0]['id']
 #         characters['moves'] = []
 #     else:
-
-
-
-
-
-
-
-
-
-# print(type(mainContent.contents[0]))
-
-# mainContent.contents = [i for i in mainContent.contents if re.match("\S", i)]#list(filter(lambda x: re.match("\S", x), mainContent.contents))
-
-# print(f"len of mainContent: {len(mainContent.contents)}")
-
-# for i in range(len(mainContent.contents)):
-#     print(f"{i}\t{mainContent.contents[i]}")
-
-# print(type(mainContent.contents[214]))
-# print(mainContent.contents)
-
-# for i in range(len(mainContent.contents)):
-#     print(f"{i}\t{mainContent.contents[i]}")
-
-
-
-# for h in soup.find_all("span", attrs={"class": "mw-headline"}): # find_all(name, attrs, recursive, string, limit, **kwargs)
-#     print(h.get("id"))
-
-# print("\n\n")
-
-# for h in soup.find_all("a", attrs={"href": re.compile("^/wiki/Guilty_Gear_Strive/")}): # find_all(name, attrs, recursive, string, limit, **kwargs)
-#     print(h.contents[0])
-
-# print("\n\n")
-
-# for tbody in soup.find_all("tbody"):
-#     print(tbody.contents)
