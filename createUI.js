@@ -42,14 +42,16 @@ function createCharsList(chars) {
         }
 
         newLabel.appendChild(newRadio);
-        const newName = document.createElement("p");
-        const newText = document.createTextNode(`${char.displayName}`);
-        newName.appendChild(newText);
-        newLabel.appendChild(newName);
+
         let newImg = document.createElement("img");
         newImg.src = `${char.img}`;
         newImg.className = "char-thumbnail";
         newLabel.appendChild(newImg);
+        const newName = document.createElement("p");
+        const newText = document.createTextNode(`${char.displayName}`);
+        newName.className = "bottom-left";
+        newName.appendChild(newText);
+        newLabel.appendChild(newName);
         const newBreak = document.createElement("br");
         newLabel.appendChild(newBreak);
         const charSection = document.getElementById("characterSelect");
@@ -113,8 +115,8 @@ function createMoveList(moves) {
     //     }
     // });
 
-    moveList.appendChild(createMove(moves.normals, "Normals"));
-    moveList.appendChild(createMove(moves.specials, "Specials"));
+    moveList.appendChild(createMove(moves.normals, "Command Normals"));
+    moveList.appendChild(createMove(moves.specials, "Special Attacks"));
     moveList.appendChild(createMove(moves.overdrives, "Overdrives"));
     // const specialsDiv = document.createElement("div");
 }
