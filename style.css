@@ -21,14 +21,7 @@ body {
         height: 750px;
         overflow-y: scroll;
     }
-}
 
-@media (min-width: 500px) {
-    section.panel {
-        width: 200px;
-        height: 750px;
-        overflow-y: scroll;
-    }
     .char-thumbnail {
         width: 159px; /*106px;*/
         height: 158px; /*105px;*/
@@ -45,6 +38,36 @@ body {
     
     #movelist {
         width: 750px;
+    }
+}
+
+@media (min-width: 500px) {
+    section.panel {
+        width: 200px;
+        height: 750px;
+        overflow-y: scroll;
+    }
+
+    .char-thumbnail {
+        width: 159px; /*106px;*/
+        height: 158px; /*105px;*/
+        border: 10px solid;
+        color: #ab5042;
+    }
+    
+    .separator {
+        border-left: 6px solid black;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 750px;
+    }
+    
+    #characters {
+        width: 250px;
+    }
+
+    #movelist {
+        width: 700px;
     }
 }
 
