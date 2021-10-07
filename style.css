@@ -103,10 +103,6 @@ input[type="radio"] {
     filter: hue-rotate(180deg);
 }
 
-/* .char-thumbnail:active {
-    color: red;
-} */
-
 input[type="radio"]:checked + img{
     color: green;
 }
