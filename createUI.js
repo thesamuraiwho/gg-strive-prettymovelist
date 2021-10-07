@@ -63,7 +63,7 @@ function createCharsList(chars) {
 
 function createMoveList(moves) {
     // console.log(moveList.moves);
-    const moveList = document.getElementById("movelist");
+    const moveList = document.getElementById("movelistMenu");
     console.log(`movelist.innerHTML: ${movelist.innerHTML}`);
     moveList.innerHTML = "";
 

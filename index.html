@@ -7,41 +7,54 @@
     <title>Guilty Gear -Strive- Pretty Movelist</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="createUI.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Guilty Gear Strive Move List</h1>
     <header id="header">
-        <nav id="nav-bar">
+        <h1>Guilty Gear Strive Move List</h1>
+        <!-- <nav id="nav-bar">
             <ul>
-                <!-- TODO settings for Fightstick/Pad, numpad vs pictures -->
                 <li><a href="#settings" class="nav-link">Settings</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
-    <section id="settings">
-        <label for="controller-layout">Controller Layout</label>
-        <select name="controller-layout" id="controller-layout">
-            <option value="fightstick">Fightstick</option>
-            <option value="ps-fightpad">Playstation Fightpad</option>
-            <option value="xb-fightpad">Xbox Fightpad</option>
-        </select>
-        <label for="command-layout">Command Layout</label>
-        <select name="command-layout" id="command-layout">
-            <option value="numpad">Numpad</option>
-            <option value="shapes">Shapes</option>
-        </select>
-    </section>
-    <div id="main-content">
-        <section class="panel" id="characters">
-            <h2>Characters</h2>
-            <form id="characterSelect" width="100px" height="100px">
-            </form>
+    <main>
+        <section id="settings">
+            <label for="controller-layout">Controller Layout</label>
+            <select name="controller-layout" id="controller-layout">
+                <option value="fightstick">Fightstick</option>
+                <option value="ps-fightpad">Playstation Fightpad</option>
+                <option value="xb-fightpad">Xbox Fightpad</option>
+            </select>
+            <label for="command-layout">Command Layout</label>
+            <select name="command-layout" id="command-layout">
+                <option value="numpad">Numpad</option>
+                <option value="shapes">Shapes</option>
+            </select>
         </section>
-        <div class="separator"></div>
-        <section class="panel" id="movelist">
-            <h2>Move List</h2>
-        </section>
-    </div>
+        <div id="main-content">
+            <section class="panel" id="characters">
+                <h2 class="headline">Characters</h2>
+                <div class="menu" id="characterMenu">
+                    <form id="characterSelect" width="100px" height="100px">
+                    </form>
+                </div>
+            </section>
+            <div class="separator"></div>
+            <section class="panel" id="movelist">
+                <h2 class="headline">Move List</h2>
+                <ul>
+                    <li><a href="#command-normals" class="nav-link">Command Normals</a></li>
+                    <li><a href="#special-attacks" class="nav-link">Special Attacks</a></li>
+                    <li><a href="#overdrives" class="nav-link">Overdrives</a></li>
+                </ul>
+                <div class="menu" id="movelistMenu">
+                </div>
+            </section>
+        </div>
+    </main>
     <footer>
         <p><a href="https://github.com/thesamuraiwho/gg-strive-prettymovelist" target="_blank">Github</a> | Fanmade Project by thesamuraiwho | Images are from Guilty Gear Strive & © ARC SYSTEM WORKS copyright protection.</p>
     </footer>
