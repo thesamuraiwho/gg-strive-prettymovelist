@@ -9,6 +9,19 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 def findMoves(char, charMoves):
+    """
+    Sifts through the DOM to retreive a character's move names and
+    command inputs.
+
+    Parameters:
+        char (bs4 obj): bs4 element which contains a specific character's
+            section of the DOM
+        charMoves (dict): Dictionary containing all character move names
+            and move inputs
+
+    Returns:
+        None
+    """
     moveType = ""
     moveName = ""
     for d in char.descendants:
@@ -16,55 +29,31 @@ def findMoves(char, charMoves):
         if d.name == "td" and d.has_attr("style"):
             # print(f"{d}\n\n")
             if d['style'] == "text-align:left":
-                # print(d)
-                # print(d.contents[0].contents)
-                # print(f"{d.text}\n")
+                # If the move name (first element of contents) only has one element,
+                # it must be the whole name
                 if len(d.contents[0].contents) == 1:
                     moveName = d.text.strip()
+                # Otherwise, the name is broken with <br/> elements and must be constructed
                 else:
                     for i in d.contents[0].contents:
                         if i.name == "br":
                             moveName += " "
                         else:
                             moveName += i
-                        # print(i.name)
+            # Move commands/inputs
             elif d['style'] == "text-align:right":
                 command = []
-                # print(d.contents)
-                # print(len(d))
+                # Get the first element since the list only contains two and the other is a '\n'
                 e = d.contents[0]
                 for f in e.descendants:
-                    # print(f)
-                    
                     if f.name == "img":
                         command.append(f['src'])
-                    # elif f.name == "b":
-                    #     command.append(f.text)
-                    #     print("b")
-                    #     print(f)
-                    #     print("\n")
-                    # elif f.name != "a" and f.name != "b":
+                    # Text elements have no name, whereas others such as <small> and <a> do.
                     elif f.name == None:
-                        # print("not a or b")
-                        # print(f.name)
-                        # print(f)
                         command.append((f.text).strip())
-                        # print("\n")
-                    # else:
-                    #     print(f.name)
-                    #     print(f)
-                    #     print("\n")
-                #     else:
-                #         print(e)
-                #         pp.pprint(e.__dict__)
-                #         print("\n")
-                # print(f"{command}\n")
                 charMoves[moveType][moveName] = command
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
-                # print(f"\n\n{(d.text).lower()}")
                 moveType = (d.text).lower().strip()
-    
-    # pp.pprint(charMoves)
 
 site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
 req = requests.get(site)
@@ -139,9 +128,7 @@ print(f"len of mainContent: {len(mainContent.contents)}")
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}\n\n")
 
-# Removing the div with the character's thumbnail
-
-# <div class="floatright">
+# Removing the div with the character's thumbnail <div class="floatright">
 
 floatDiv = soup.new_tag("div")
 floatDiv["class"] = "floatright"
@@ -170,70 +157,10 @@ for i in range(len(dlcChars)):
 
 chars = {}
 
-# # Goldlewis
-# charName = dlcChars[0].contents[0]["id"]
-# # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#     "overdrives": OrderedDict()}
-
-# # Normals and Specials
-# # print("Normals and Specials")
-# # print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
-
-# findMoves(dlcChars[1], charMoves)
-
-# # Overdrives
-# # print("Overdrives")
-
-# # Finding move names and move commands
-
-# findMoves(dlcChars[2], charMoves)
-# pp.pprint(charMoves)
-
-# # print(f"charName: {charName}")
-
-# chars[charName] = charMoves
-# pp.pprint(chars)
-
-# # Jack O'
-# charName = dlcChars[3].contents[0]["id"]
-# print(f"charName: {charName}")
-# # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#     "overdrives": OrderedDict()}
-
-# findMoves(dlcChars[4], charMoves)
-# findMoves(dlcChars[5], charMoves)
-# chars[charName] = charMoves
-# pp.pprint(chars)
-
-
 for i in range(len(baseChars)):
     print(f"\n{i}\n{baseChars[i]}")
 
 print("\n\n")
-
-# # Anji (normal moveset)
-# charName = baseChars[0].contents[0]["id"]
-# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#     "overdrives": OrderedDict()}
-
-# findMoves(baseChars[1], charMoves)
-# findMoves(baseChars[2], charMoves)
-# print(charName)
-# pp.pprint(charMoves)
-
-# # Zato (two special attacks sections)
-# charName = baseChars[42].contents[0]["id"]
-# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#     "overdrives": OrderedDict()}
-
-# findMoves(baseChars[43], charMoves)
-# findMoves(baseChars[44], charMoves)
-# print(charName)
-# pp.pprint(charMoves)
-
-
 
 # ### Issue with millia (27) and ramlethal (36) command normals names.
 # ### SOLUTION: Wasn't an issue at all. Just a print formatting thing.
@@ -263,10 +190,7 @@ while(count < len(baseChars)):
 
     findMoves(baseChars[count + 1], charMoves)
     findMoves(baseChars[count + 2], charMoves)
-    # print(charName)
-    # pp.pprint(charMoves)
     chars[charName] = charMoves
-    # pp.pprint(chars)
     count += 3
 
 count = 0
@@ -278,29 +202,9 @@ while(count < len(dlcChars)):
 
     findMoves(dlcChars[count + 1], charMoves)
     findMoves(dlcChars[count + 2], charMoves)
-    # print(charName)
-    # pp.pprint(charMoves)
     chars[charName] = charMoves
-    # pp.pprint(chars)
     count += 3
 
 pp.pprint(chars)
 print(len(chars))
 pp.pprint(chars['May'])
-
-
-
-# for i in range(len(dlcChars)):
-#     if(dlcChars[i].name == "h3"): # DLC character name
-#         print(f"{i}\t{dlcChars[i]}\n\n{dlcChars[i].contents}\n\n{dlcChars[i].contents[0]['id']}\n\n")
-#     else:
-#         print(f"{i}\t{dlcChars[i]}\n\n{dlcChars[i].contents}\n\n")
-
-
-# characters = {}
-# char = ""
-# for i in dlcChars:
-#     if i.name == "h3":
-#         characters['name'] = i.contents[0]['id']
-#         characters['moves'] = []
-#     else:
