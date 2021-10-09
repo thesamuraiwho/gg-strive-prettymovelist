@@ -16,8 +16,18 @@ def findMoves(char, charMoves):
         if d.name == "td" and d.has_attr("style"):
             # print(f"{d}\n\n")
             if d['style'] == "text-align:left":
+                # print(d)
+                # print(d.contents[0].contents)
                 # print(f"{d.text}\n")
-                moveName = d.text.strip()
+                if len(d.contents[0].contents) == 1:
+                    moveName = d.text.strip()
+                else:
+                    for i in d.contents[0].contents:
+                        if i.name == "br":
+                            moveName += " "
+                        else:
+                            moveName += i
+                        # print(i.name)
             elif d['style'] == "text-align:right":
                 command = []
                 # print(d.contents)
@@ -39,7 +49,7 @@ def findMoves(char, charMoves):
                         # print(f.name)
                         # print(f)
                         command.append((f.text).strip())
-                    #     print("\n")
+                        # print("\n")
                     # else:
                     #     print(f.name)
                     #     print(f)
@@ -198,10 +208,10 @@ chars = {}
 # pp.pprint(chars)
 
 
-# for i in range(len(baseChars)):
-#     print(f"\n{i}\n{baseChars[i]}")
+for i in range(len(baseChars)):
+    print(f"\n{i}\n{baseChars[i]}")
 
-# print("\n\n")
+print("\n\n")
 
 # # Anji (normal moveset)
 # charName = baseChars[0].contents[0]["id"]
@@ -227,55 +237,55 @@ chars = {}
 
 # ### Issue with millia (27) and ramlethal (36) command normals names.
 # ### SOLUTION: Wasn't an issue at all. Just a print formatting thing.
-count = 30
+# count = 24
 
-print(baseChars[count])
-print(baseChars[count + 1])
-print(baseChars[count + 2])
+# print(baseChars[count])
+# print(baseChars[count + 1])
+# print(baseChars[count + 2])
 
-charName = baseChars[count].contents[0]["id"]
-charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-    "overdrives": OrderedDict()}
+# charName = baseChars[count].contents[0]["id"]
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
 
-findMoves(baseChars[count + 1], charMoves)
-findMoves(baseChars[count + 2], charMoves)
-print(charName)
-pp.pprint(charMoves)
+# findMoves(baseChars[count + 1], charMoves)
+# findMoves(baseChars[count + 2], charMoves)
+# print(charName)
+# pp.pprint(charMoves)
 
 
 ### WORKING LOOP
 
-# count = 0
-# while(count < len(baseChars)):
-#     charName = baseChars[count].contents[0]["id"]
-#     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#         "overdrives": OrderedDict()}
+count = 0
+while(count < len(baseChars)):
+    charName = baseChars[count].contents[0]["id"]
+    charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+        "overdrives": OrderedDict()}
 
-#     findMoves(baseChars[count + 1], charMoves)
-#     findMoves(baseChars[count + 2], charMoves)
-#     # print(charName)
-#     # pp.pprint(charMoves)
-#     chars[charName] = charMoves
-#     # pp.pprint(chars)
-#     count += 3
+    findMoves(baseChars[count + 1], charMoves)
+    findMoves(baseChars[count + 2], charMoves)
+    # print(charName)
+    # pp.pprint(charMoves)
+    chars[charName] = charMoves
+    # pp.pprint(chars)
+    count += 3
 
-# count = 0
+count = 0
 
-# while(count < len(dlcChars)):
-#     charName = dlcChars[count].contents[0]["id"]
-#     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#         "overdrives": OrderedDict()}
+while(count < len(dlcChars)):
+    charName = dlcChars[count].contents[0]["id"]
+    charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+        "overdrives": OrderedDict()}
 
-#     findMoves(dlcChars[count + 1], charMoves)
-#     findMoves(dlcChars[count + 2], charMoves)
-#     # print(charName)
-#     # pp.pprint(charMoves)
-#     chars[charName] = charMoves
-#     # pp.pprint(chars)
-#     count += 3
+    findMoves(dlcChars[count + 1], charMoves)
+    findMoves(dlcChars[count + 2], charMoves)
+    # print(charName)
+    # pp.pprint(charMoves)
+    chars[charName] = charMoves
+    # pp.pprint(chars)
+    count += 3
 
-# pp.pprint(chars)
-# print(len(chars))
+pp.pprint(chars)
+print(len(chars))
 pp.pprint(chars['May'])
 
 
