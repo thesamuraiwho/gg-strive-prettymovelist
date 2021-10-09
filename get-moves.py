@@ -32,7 +32,7 @@ def findMoves(char, charMoves):
                 # print(f"\n\n{(d.text).lower()}")
                 moveType = (d.text).lower().strip()
     
-    pp.pprint(charMoves)
+    # pp.pprint(charMoves)
 
 site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
 req = requests.get(site)
@@ -141,7 +141,8 @@ chars = {}
 # Goldlewis
 charName = dlcChars[0].contents[0]["id"]
 # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), "overdrives": OrderedDict()}
+charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+    "overdrives": OrderedDict()}
 
 # Normals and Specials
 # print("Normals and Specials")
@@ -166,12 +167,73 @@ pp.pprint(chars)
 charName = dlcChars[3].contents[0]["id"]
 print(f"charName: {charName}")
 # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), "overdrives": OrderedDict()}
+charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+    "overdrives": OrderedDict()}
 
 findMoves(dlcChars[4], charMoves)
 findMoves(dlcChars[5], charMoves)
 chars[charName] = charMoves
 pp.pprint(chars)
+
+
+# for i in range(len(baseChars)):
+#     print(f"\n{i}\n{baseChars[i]}")
+
+print("\n\n")
+
+# # Anji (normal moveset)
+# charName = baseChars[0].contents[0]["id"]
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
+
+# findMoves(baseChars[1], charMoves)
+# findMoves(baseChars[2], charMoves)
+# print(charName)
+# pp.pprint(charMoves)
+
+# # Zato (two special attacks sections)
+# charName = baseChars[42].contents[0]["id"]
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
+
+# findMoves(baseChars[43], charMoves)
+# findMoves(baseChars[44], charMoves)
+# print(charName)
+# pp.pprint(charMoves)
+
+
+
+# ### Issue with millia (27) and ramlethal (36) command normals names.
+# ### SOLUTION: Wasn't an issue at all. Just a print formatting thing.
+# count = 36
+# charName = baseChars[count].contents[0]["id"]
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
+
+# findMoves(baseChars[count + 1], charMoves)
+# findMoves(baseChars[count + 2], charMoves)
+# print(charName)
+# pp.pprint(charMoves)
+
+count = 0
+while(count < len(baseChars)):
+    charName = baseChars[count].contents[0]["id"]
+    charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+        "overdrives": OrderedDict()}
+
+    findMoves(baseChars[count + 1], charMoves)
+    findMoves(baseChars[count + 2], charMoves)
+    # print(charName)
+    # pp.pprint(charMoves)
+    chars[charName] = charMoves
+    # pp.pprint(chars)
+    count += 3
+
+pp.pprint(chars)
+
+# pp.pprint(chars['Ramlethal_Valentine'])
+
+print(len(chars))
 
 # for i in range(len(dlcChars)):
 #     if(dlcChars[i].name == "h3"): # DLC character name
