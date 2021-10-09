@@ -21,11 +21,33 @@ def findMoves(char, charMoves):
             elif d['style'] == "text-align:right":
                 command = []
                 # print(d.contents)
-                for e in d.descendants:
-                    if e.name == "img":
-                        command.append(e['src'])
-                    elif e.name == "b":
-                        command.append(e.text)
+                # print(len(d))
+                e = d.contents[0]
+                for f in e.descendants:
+                    # print(f)
+                    
+                    if f.name == "img":
+                        command.append(f['src'])
+                    # elif f.name == "b":
+                    #     command.append(f.text)
+                    #     print("b")
+                    #     print(f)
+                    #     print("\n")
+                    # elif f.name != "a" and f.name != "b":
+                    elif f.name == None:
+                        # print("not a or b")
+                        # print(f.name)
+                        # print(f)
+                        command.append((f.text).strip())
+                    #     print("\n")
+                    # else:
+                    #     print(f.name)
+                    #     print(f)
+                    #     print("\n")
+                #     else:
+                #         print(e)
+                #         pp.pprint(e.__dict__)
+                #         print("\n")
                 # print(f"{command}\n")
                 charMoves[moveType][moveName] = command
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
@@ -138,48 +160,48 @@ for i in range(len(dlcChars)):
 
 chars = {}
 
-# Goldlewis
-charName = dlcChars[0].contents[0]["id"]
-# charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-    "overdrives": OrderedDict()}
+# # Goldlewis
+# charName = dlcChars[0].contents[0]["id"]
+# # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
 
-# Normals and Specials
-# print("Normals and Specials")
-# print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
+# # Normals and Specials
+# # print("Normals and Specials")
+# # print(f"{1}\t{dlcChars[1]}\n\n{dlcChars[1].contents}\n\n{len(dlcChars[1].contents)}")
 
-findMoves(dlcChars[1], charMoves)
+# findMoves(dlcChars[1], charMoves)
 
-# Overdrives
-# print("Overdrives")
+# # Overdrives
+# # print("Overdrives")
 
-# Finding move names and move commands
+# # Finding move names and move commands
 
-findMoves(dlcChars[2], charMoves)
-pp.pprint(charMoves)
+# findMoves(dlcChars[2], charMoves)
+# pp.pprint(charMoves)
 
+# # print(f"charName: {charName}")
+
+# chars[charName] = charMoves
+# pp.pprint(chars)
+
+# # Jack O'
+# charName = dlcChars[3].contents[0]["id"]
 # print(f"charName: {charName}")
+# # charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
+# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#     "overdrives": OrderedDict()}
 
-chars[charName] = charMoves
-pp.pprint(chars)
-
-# Jack O'
-charName = dlcChars[3].contents[0]["id"]
-print(f"charName: {charName}")
-# charMoves = {"command normals": {}, "special attacks": {}, "overdrives": {}}
-charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-    "overdrives": OrderedDict()}
-
-findMoves(dlcChars[4], charMoves)
-findMoves(dlcChars[5], charMoves)
-chars[charName] = charMoves
-pp.pprint(chars)
+# findMoves(dlcChars[4], charMoves)
+# findMoves(dlcChars[5], charMoves)
+# chars[charName] = charMoves
+# pp.pprint(chars)
 
 
 # for i in range(len(baseChars)):
 #     print(f"\n{i}\n{baseChars[i]}")
 
-print("\n\n")
+# print("\n\n")
 
 # # Anji (normal moveset)
 # charName = baseChars[0].contents[0]["id"]
@@ -205,35 +227,58 @@ print("\n\n")
 
 # ### Issue with millia (27) and ramlethal (36) command normals names.
 # ### SOLUTION: Wasn't an issue at all. Just a print formatting thing.
-# count = 36
-# charName = baseChars[count].contents[0]["id"]
-# charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-#     "overdrives": OrderedDict()}
+count = 30
 
-# findMoves(baseChars[count + 1], charMoves)
-# findMoves(baseChars[count + 2], charMoves)
-# print(charName)
-# pp.pprint(charMoves)
+print(baseChars[count])
+print(baseChars[count + 1])
+print(baseChars[count + 2])
 
-count = 0
-while(count < len(baseChars)):
-    charName = baseChars[count].contents[0]["id"]
-    charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-        "overdrives": OrderedDict()}
+charName = baseChars[count].contents[0]["id"]
+charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+    "overdrives": OrderedDict()}
 
-    findMoves(baseChars[count + 1], charMoves)
-    findMoves(baseChars[count + 2], charMoves)
-    # print(charName)
-    # pp.pprint(charMoves)
-    chars[charName] = charMoves
-    # pp.pprint(chars)
-    count += 3
+findMoves(baseChars[count + 1], charMoves)
+findMoves(baseChars[count + 2], charMoves)
+print(charName)
+pp.pprint(charMoves)
 
-pp.pprint(chars)
 
-# pp.pprint(chars['Ramlethal_Valentine'])
+### WORKING LOOP
 
-print(len(chars))
+# count = 0
+# while(count < len(baseChars)):
+#     charName = baseChars[count].contents[0]["id"]
+#     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#         "overdrives": OrderedDict()}
+
+#     findMoves(baseChars[count + 1], charMoves)
+#     findMoves(baseChars[count + 2], charMoves)
+#     # print(charName)
+#     # pp.pprint(charMoves)
+#     chars[charName] = charMoves
+#     # pp.pprint(chars)
+#     count += 3
+
+# count = 0
+
+# while(count < len(dlcChars)):
+#     charName = dlcChars[count].contents[0]["id"]
+#     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#         "overdrives": OrderedDict()}
+
+#     findMoves(dlcChars[count + 1], charMoves)
+#     findMoves(dlcChars[count + 2], charMoves)
+#     # print(charName)
+#     # pp.pprint(charMoves)
+#     chars[charName] = charMoves
+#     # pp.pprint(chars)
+#     count += 3
+
+# pp.pprint(chars)
+# print(len(chars))
+pp.pprint(chars['May'])
+
+
 
 # for i in range(len(dlcChars)):
 #     if(dlcChars[i].name == "h3"): # DLC character name
