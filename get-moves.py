@@ -90,11 +90,18 @@ mainContent.contents = [i for i in mainContent.contents if i.names != "div" and 
 baseChars = mainContent.contents[:45]
 dlcChars = mainContent.contents[46:]
 
-chars = {}
+# chars = {}
+chars = []
+
+charImgsPath = "assets/char-imgs"
+dir = os.listdir(charImgsPath)
+dir.remove("gg-placeholder.clip")
+print(dir)
 
 ### WORKING LOOP
 
 count = 0
+charNum = 0
 while(count < len(baseChars)):
     charName = baseChars[count].contents[0]["id"].replace("_", " ")
     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
@@ -102,7 +109,15 @@ while(count < len(baseChars)):
 
     findMoves(baseChars[count + 1], charMoves)
     findMoves(baseChars[count + 2], charMoves)
-    chars[charName] = charMoves
+    # chars[charName] = charMoves
+
+    chars.append({
+        "fullName": charName,
+        "displayName": charName.split(" ")[0].upper(),
+        "img": "",
+        "moves": charMoves
+    })
+
     count += 3
 
 count = 0
@@ -114,24 +129,27 @@ while(count < len(dlcChars)):
 
     findMoves(dlcChars[count + 1], charMoves)
     findMoves(dlcChars[count + 2], charMoves)
-    chars[charName] = charMoves
+    # chars[charName] = charMoves
     count += 3
 
-# pp.pprint(chars)
+pp.pprint(chars)
 
 commandImgs = set()
 
-for char in chars.values():
-    for v in char.values(): # Move types (dicts)
+for char in range(len(chars)):
+    # print(chars[char])
+    for v in chars[char]['moves'].values(): # Move types (dicts)
+        # print(v)
         for v1 in v.values(): # Moves (lists)
+            # print(v1)
             for i in range(len(v1)): # Commands (strs)
                 if re.search(".png$", v1[i]):
                     commandImgs.add(v1[i])
                     v1[i] = f"assets/command-imgs/{v1[i].split('/')[-1]}"
 
 # Download all the command icons
-path = "assets/command-imgs"
-dir = os.listdir(path)
+commandImgsPath = "assets/command-imgs"
+dir = os.listdir(commandImgsPath)
 # print(dir)
 
 # Check if the command images directory is empty or not
