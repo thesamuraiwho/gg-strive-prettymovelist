@@ -56,6 +56,35 @@ def findMoves(char, charMoves):
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
                 moveType = (d.text).lower().strip()
 
+def generateCharMoveData(chars, chardir):
+    count = 0
+    while(count < len(chars)):
+        charName = chars[count].contents[0]["id"]
+        charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+            "overdrives": OrderedDict()}
+
+        findMoves(chars[count + 1], charMoves)
+        findMoves(chars[count + 2], charMoves)
+
+        img = "assets/char-imgs/gg-placeholder.jpg" # Default profile image
+        displayName = charName.split(" ")[0].upper()
+
+        # Search for character's profile image
+        for i in chardir:
+            if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
+                img = i
+
+        # Append character data to dict of characters
+        chars.append({
+            "fullName": charName,
+            "displayName": displayName,
+            "img": img,
+            "moves": charMoves
+        })
+
+        count += 3 # Increment by 3 beautiful soup elements to the next
+                    # character's section
+
 site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
 req = requests.get(site)
 
@@ -94,9 +123,9 @@ dlcChars = mainContent.contents[46:]
 chars = []
 
 charImgsPath = "assets/char-imgs"
-dir = os.listdir(charImgsPath)
-dir.remove("gg-placeholder.clip")
-print(dir)
+chardir = os.listdir(charImgsPath)
+chardir.remove("gg-placeholder.clip")
+print(chardir)
 
 ### WORKING LOOP
 
@@ -111,26 +140,50 @@ while(count < len(baseChars)):
     findMoves(baseChars[count + 2], charMoves)
     # chars[charName] = charMoves
 
+    img = "assets/char-imgs/gg-placeholder.jpg"
+    displayName = charName.split(" ")[0].upper()
+    for i in chardir:
+        print(((i.split("/")[-1]).split(".")[0]).upper())
+        if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
+            img = i
+
     chars.append({
         "fullName": charName,
-        "displayName": charName.split(" ")[0].upper(),
-        "img": "",
+        "displayName": displayName,
+        "img": img,
         "moves": charMoves
     })
 
     count += 3
 
-count = 0
 
-while(count < len(dlcChars)):
-    charName = dlcChars[count].contents[0]["id"]
-    charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
-        "overdrives": OrderedDict()}
+generateCharMoveData(dlcChars, chardir)
 
-    findMoves(dlcChars[count + 1], charMoves)
-    findMoves(dlcChars[count + 2], charMoves)
-    # chars[charName] = charMoves
-    count += 3
+# count = 0
+
+# while(count < len(dlcChars)):
+#     charName = dlcChars[count].contents[0]["id"]
+#     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
+#         "overdrives": OrderedDict()}
+
+#     findMoves(dlcChars[count + 1], charMoves)
+#     findMoves(dlcChars[count + 2], charMoves)
+#     # chars[charName] = charMoves
+#     img = "assets/char-imgs/gg-placeholder.jpg"
+#     displayName = charName.split(" ")[0].upper()
+#     for i in chardir:
+#         print(((i.split("/")[-1]).split(".")[0]).upper())
+#         if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
+#             img = i
+
+#     chars.append({
+#         "fullName": charName,
+#         "displayName": displayName,
+#         "img": img,
+#         "moves": charMoves
+#     })
+
+#     count += 3
 
 pp.pprint(chars)
 
