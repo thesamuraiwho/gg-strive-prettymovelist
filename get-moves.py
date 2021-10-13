@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import os
 from collections import OrderedDict
 
 import pprint
@@ -49,7 +50,7 @@ def findMoves(char, charMoves):
                     if f.name == "img":
                         command.append(f['src'])
                     # Text elements have no name, whereas others such as <small> and <a> do.
-                    elif f.name == None:
+                    elif f.name == None and f.text != " ":
                         command.append((f.text).strip())
                 charMoves[moveType][moveName] = command
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
@@ -86,19 +87,19 @@ mainContent.contents = [i for i in mainContent.contents if i != "\n"]
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}")
     
-print(f"len of mainContent: {len(mainContent.contents)}")
+# print(f"len of mainContent: {len(mainContent.contents)}")
 
 # Removing <p><br></p>
-print(mainContent.contents[115])
-print(mainContent.contents[115].contents)
-print(type(mainContent.contents[115]))
+# print(mainContent.contents[115])
+# print(mainContent.contents[115].contents)
+# print(type(mainContent.contents[115]))
 # Create a matching tag but something is different
 # soup = BeautifulSoup()
 para = soup.new_tag("p")
 br = soup.new_tag("br")
 para.append(br)
 para.append("\n")
-print(para)
+# print(para)
 
 # for i in range(len(mainContent.contents)):
 #     if(mainContent.contents[i] == para):
@@ -106,7 +107,7 @@ print(para)
 
 mainContent.contents = [i for i in mainContent.contents if i != para]
 
-print(f"len of mainContent: {len(mainContent.contents)}")
+# print(f"len of mainContent: {len(mainContent.contents)}")
 
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}\n\n")
@@ -116,14 +117,14 @@ print(f"len of mainContent: {len(mainContent.contents)}")
 # soup = BeautifulSoup()
 clearDiv = soup.new_tag("div")
 clearDiv['style'] = "clear: both;"
-print(clearDiv)
+# print(clearDiv)
 
 # for i in range(len(mainContent.contents)):
 #     if(mainContent.contents[i] == clearDiv):
 #         print(f"{i}\t{mainContent.contents[i]}")
 
 mainContent.contents = [i for i in mainContent.contents if i != clearDiv]
-print(f"len of mainContent: {len(mainContent.contents)}")
+# print(f"len of mainContent: {len(mainContent.contents)}")
 
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}\n\n")
@@ -132,19 +133,19 @@ print(f"len of mainContent: {len(mainContent.contents)}")
 
 floatDiv = soup.new_tag("div")
 floatDiv["class"] = "floatright"
-print(floatDiv)
+# print(floatDiv)
 
-print(mainContent.contents[66])
-print(f"\n\nmainContent.contents[66].name: {mainContent.contents[66].name}\n\nmainContent.contents[66].attrs: {mainContent.contents[66].attrs}\n")
+# print(mainContent.contents[66])
+# print(f"\n\nmainContent.contents[66].name: {mainContent.contents[66].name}\n\nmainContent.contents[66].attrs: {mainContent.contents[66].attrs}\n")
 # print(mainContent.contents[66].__dict__)
-print(mainContent.contents[66].__dict__.keys())
+# print(mainContent.contents[66].__dict__.keys())
 
 # for i in range(len(mainContent.contents)):
 #     if(mainContent.contents[i].name == "div" and mainContent.contents[i].attrs == {'class': ['floatright']}):
 #       print(f"{i}\t{mainContent.contents[i]}\n\n")
 
 mainContent.contents = [i for i in mainContent.contents if i.names != "div" and i.attrs != {'class': ['floatright']}]
-print(f"len of mainContent: {len(mainContent.contents)}\n\n")
+# print(f"len of mainContent: {len(mainContent.contents)}\n\n")
 
 # for i in range(len(mainContent.contents)):
 #     print(f"{i}\t{mainContent.contents[i]}\n\n")
@@ -152,13 +153,13 @@ print(f"len of mainContent: {len(mainContent.contents)}\n\n")
 baseChars = mainContent.contents[:45]
 dlcChars = mainContent.contents[46:]
 
-for i in range(len(dlcChars)):
-    print(f"{i}\t{dlcChars[i]}\n\n")
+# for i in range(len(dlcChars)):
+    # print(f"{i}\t{dlcChars[i]}\n\n")
 
 chars = {}
 
-for i in range(len(baseChars)):
-    print(f"\n{i}\n{baseChars[i]}")
+# for i in range(len(baseChars)):
+#     print(f"\n{i}\n{baseChars[i]}")
 
 print("\n\n")
 
@@ -184,7 +185,7 @@ print("\n\n")
 
 count = 0
 while(count < len(baseChars)):
-    charName = baseChars[count].contents[0]["id"]
+    charName = baseChars[count].contents[0]["id"].replace("_", " ")
     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(), 
         "overdrives": OrderedDict()}
 
@@ -205,6 +206,51 @@ while(count < len(dlcChars)):
     chars[charName] = charMoves
     count += 3
 
-pp.pprint(chars)
-print(len(chars))
-pp.pprint(chars['May'])
+# pp.pprint(chars)
+
+commandImgs = set()
+
+
+
+for char in chars.values():
+    for v in char.values(): # Move types (dicts)
+        # print(v)
+        for v1 in v.values(): # Moves (lists)
+            # print(v1)
+            for i in range(len(v1)): # Commands (strs)
+                # print(v2)
+                if re.search(".png$", v1[i]):
+                    commandImgs.add(v1[i])
+                    v1[i] = f"assets/command-imgs/{v1[i].split('/')[-1]}"
+                    print(v1[i])
+
+pp.pprint(chars['Faust'])
+
+# print(commandImgs)
+# print(len(commandImgs))
+# print(type(commandImgs))
+
+# Download all the command icons
+path = "assets/command-imgs"
+dir = os.listdir(path)
+# print(dir)
+
+# Check if the command images directory is empty or not
+if len(dir) == 0:
+    print("Downloading command images.")
+    for img in commandImgs:
+        res = requests.get("https:" + img)
+        shortenImg = img.split("/")[-1]
+        print(shortenImg)
+        with open(f"assets/command-imgs/{shortenImg}", "wb") as f:
+            f.write(res.content)
+else:
+    print("Skipping download for command images.")
+
+# Write out final json
+with open("gg-strive-moves.json", "w") as json_file:
+    json.dump(chars, json_file, indent=2)
+
+
+# print(len(chars))
+# pp.pprint(chars['Faust'])
