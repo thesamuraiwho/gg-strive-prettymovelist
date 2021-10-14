@@ -1,4 +1,3 @@
 requests
 bs4
-pep8
-pylint
+autopep8
