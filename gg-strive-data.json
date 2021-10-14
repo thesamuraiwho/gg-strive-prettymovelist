@@ -1887,7 +1887,7 @@
   {
     "fullName": "Jack-O'",
     "displayName": "JACK-O'",
-    "img": "assets/char-imgs/assets/char-imgs/gg-placeholder.jpg",
+    "img": "assets/char-imgs/gg-placeholder.jpg",
     "moves": {
       "command normals": [
         {
