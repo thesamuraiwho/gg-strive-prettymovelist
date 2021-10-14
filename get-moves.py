@@ -87,7 +87,7 @@ def generateCharMoveData(chars, setchars, chardir):
         findMoves(setchars[count + 1], charMoves)
         findMoves(setchars[count + 2], charMoves)
 
-        img = "assets/char-imgs/gg-placeholder.jpg"  # Default profile image
+        img = "gg-placeholder.jpg"  # Default profile image
         displayName = charName.split(" ")[0].upper()
 
         # Search for character's profile image
@@ -162,7 +162,6 @@ def main():
         for v in chars[char]['moves'].values():  # Move types (dicts)
             for move in v:  # Moves (lists)
                 for i in range(len(move['buttons'])): # Buttons (strings)
-                    print(move['buttons'][i])
                     if re.search(".png$", move['buttons'][i]):
                         commandImgs.add(move['buttons'][i])
                         move['buttons'][i] = f"assets/command-imgs/{move['buttons'][i].split('/')[-1]}"
