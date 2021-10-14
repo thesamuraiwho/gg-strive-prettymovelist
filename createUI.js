@@ -72,11 +72,28 @@ function createMoveList(moves) {
         categoryType.appendChild(document.createTextNode(`${category}`));
         moveDiv.appendChild(categoryType);
         moveCategory.forEach(move => {
-            const moveName = document.createElement("p");
+            const moveName = document.createElement("b");
             moveName.appendChild(document.createTextNode(`${move.moveName}`));
             moveDiv.appendChild(moveName);
-            const buttons = document.createElement("p");
-            buttons.appendChild(document.createTextNode(`${move.buttons}`));
+            const buttons = document.createElement("div");
+
+            console.log(move.buttons)
+
+            // Create move button icons
+            for(let i = 0; i < move.buttons.length; i++) {
+                if(move.buttons[i].match(/.png$/)){
+                    console.log(`Image ${move.buttons[i]}`);
+                    let img = document.createElement("img");
+                    img.src = encodeURIComponent(move.buttons[i]);
+                    buttons.appendChild(img);
+                } else {
+                    console.log(`Non-image ${move.buttons[i]}`);
+                    buttons.appendChild(document.createTextNode(`${move.buttons[i]}`));
+                }
+            }
+
+
+            // buttons.appendChild(document.createTextNode(`${move.buttons}`));
             moveDiv.appendChild(buttons);
             // moveDiv.appendChild(document.createElement("br"));
     
