@@ -8,9 +8,7 @@ import json
 import re
 import os
 from collections import OrderedDict
-
-import pprint
-
+# import pprint
 
 def findMoves(char, charMoves):
     """
@@ -78,7 +76,6 @@ def generateCharMoveData(chars, setchars, chardir):
 
     """
 
-
     count = 0
     while(count < len(setchars)):
         charName = setchars[count].contents[0]["id"].replace("_", " ")
@@ -90,7 +87,7 @@ def generateCharMoveData(chars, setchars, chardir):
         findMoves(setchars[count + 1], charMoves)
         findMoves(setchars[count + 2], charMoves)
 
-        img = "assets/char-imgs/gg-placeholder.jpg" # Default profile image
+        img = "assets/char-imgs/gg-placeholder.jpg"  # Default profile image
         displayName = charName.split(" ")[0].upper()
 
         # Search for character's profile image
@@ -107,14 +104,14 @@ def generateCharMoveData(chars, setchars, chardir):
             "moves": charMoves
         })
 
-        count += 3 # Increment by 3 beautiful soup elements to the next character's section
+        count += 3  # Increment by 3 beautiful soup elements to the next character's section
 
 
 def main():
     site = "https://strategywiki.org/wiki/Guilty_Gear_Strive/Moves"
     req = requests.get(site)
 
-    pp = pprint.PrettyPrinter(indent=4)
+    # pp = pprint.PrettyPrinter(indent=4)
 
     soup = BeautifulSoup(req.text, "html.parser")
     mainContent = soup.find("div", attrs={"class": "mw-parser-output"})
@@ -150,80 +147,18 @@ def main():
     baseChars = mainContent.contents[:45]
     dlcChars = mainContent.contents[46:]
 
-    # chars = {}
     chars = []
 
     charImgsPath = "assets/char-imgs"
     chardir = os.listdir(charImgsPath)
     chardir.remove("gg-placeholder.clip")
-    print(chardir)
 
-    # WORKING LOOP
     generateCharMoveData(chars, baseChars, chardir)
-
-    # count = 0
-    # charNum = 0
-    # while(count < len(baseChars)):
-    #     charName = baseChars[count].contents[0]["id"].replace("_", " ")
-    #     charMoves = {
-    #         "command normals": OrderedDict(),
-    #         "special attacks": OrderedDict(),
-    #         "overdrives": OrderedDict()}
-
-    #     findMoves(baseChars[count + 1], charMoves)
-    #     findMoves(baseChars[count + 2], charMoves)
-    #     # chars[charName] = charMoves
-
-    #     img = "assets/char-imgs/gg-placeholder.jpg"
-    #     displayName = charName.split(" ")[0].upper()
-    #     for i in chardir:
-    #         # print(((i.split("/")[-1]).split(".")[0]).upper())
-    #         if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
-    #             img = i
-
-    #     chars.append({
-    #         "fullName": charName,
-    #         "displayName": displayName,
-    #         "img": img,
-    #         "moves": charMoves
-    #     })
-
-    #     count += 3
-
-
     generateCharMoveData(chars, dlcChars, chardir)
 
-    # count = 0
-
-    # while(count < len(dlcChars)):
-    #     charName = dlcChars[count].contents[0]["id"]
-    #     charMoves = {"command normals": OrderedDict(), "special attacks": OrderedDict(),
-    #         "overdrives": OrderedDict()}
-
-    #     findMoves(dlcChars[count + 1], charMoves)
-    #     findMoves(dlcChars[count + 2], charMoves)
-    #     # chars[charName] = charMoves
-    #     img = "assets/char-imgs/gg-placeholder.jpg"
-    #     displayName = charName.split(" ")[0].upper()
-    #     for i in chardir:
-    #         print(((i.split("/")[-1]).split(".")[0]).upper())
-    #         if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
-    #             img = i
-
-    #     chars.append({
-    #         "fullName": charName,
-    #         "displayName": displayName,
-    #         "img": img,
-    #         "moves": charMoves
-    #     })
-
-    #     count += 3
-
-    pp.pprint(chars)
-
+    # Find all command image icons
     commandImgs = set()
 
-    # Find all command image icons
     for char in range(len(chars)):
         for v in chars[char]['moves'].values():  # Move types (dicts)
             for v1 in v.values():  # Moves (lists)
@@ -234,11 +169,10 @@ def main():
 
     # Download all the command icons
     commandImgsPath = "assets/command-imgs"
-    dir = os.listdir(commandImgsPath)
-    # print(dir)
+    commanddir = os.listdir(commandImgsPath)
 
     # Check if the command images directory is empty or not
-    if len(dir) == 0:
+    if len(commanddir) == 0:
         print("Downloading command images.")
         for img in commandImgs:
             res = requests.get("https:" + img)
@@ -250,8 +184,9 @@ def main():
         print("Skipping download for command images.")
 
     # Write out final json
-    with open("gg-strive-moves.json", "w") as json_file:
+    with open("gg-strive-data.json", "w") as json_file:
         json.dump(chars, json_file, indent=2)
+
 
 if __name__ == "__main__":
     main()
