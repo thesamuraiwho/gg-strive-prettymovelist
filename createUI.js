@@ -38,7 +38,6 @@ function createCharsList(chars) {
         if(char.displayName === "ANJI") {
             newRadio.checked = "checked";
             createMoveList(char.moves);
-            // createMoveList(char.moves);
         }
 
         newLabel.appendChild(newRadio);
@@ -114,10 +113,22 @@ function createMoveList(moves) {
     //         });
     //     }
     // });
-
-    moveList.appendChild(createMove(moves.normals, "Command Normals"));
-    moveList.appendChild(createMove(moves.specials, "Special Attacks"));
-    moveList.appendChild(createMove(moves.overdrives, "Overdrives"));
+    let section = document.createElement("section");
+    section.id = "command-normals";
+    moveList.appendChild(section);
+    section.appendChild(createMove(moves["command normals"], "Command Normals"));
+    section = document.createElement("section");
+    section.id = "special-attacks";
+    moveList.appendChild(section);
+    section.appendChild(createMove(moves["special attacks"], "Special Attacks"));
+    section = document.createElement("section");
+    section.id = "overdrives";
+    moveList.appendChild(section);
+    section.appendChild(createMove(moves["overdrives"], "Overdrives"));
+    
+    // moveList.appendChild(createMove(moves["command normals"], "Command Normals"));
+    // moveList.appendChild(createMove(moves["special attacks"], "Special Attacks"));
+    // moveList.appendChild(createMove(moves["overdrives"], "Overdrives"));
     // const specialsDiv = document.createElement("div");
 }
 
@@ -136,8 +147,8 @@ async function fetchJson(filename, func) {
 // addCharacter();
 
 // fetchJson("gg-strive-chars.json", createCharsList);
-fetchJson("gg-strive.json", createCharsList);
-fetchJson("gg-strive.json", console.log);
+fetchJson("gg-strive-data.json", createCharsList);
+fetchJson("gg-strive-data.json", console.log);
 
 // document.getElementsByName("chars").onclick = () => {
 //     console.log(`char selection: ${document.querySelector('input[name="chars"]:checked')}`);
