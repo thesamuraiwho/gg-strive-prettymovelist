@@ -1,0 +1,2014 @@
+[
+  {
+    "fullName": "Anji Mito",
+    "displayName": "ANJI",
+    "img": "assets/char-imgs/anji.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Shitsu",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Suigetsu no Hakobi",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Fuujin",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baShin: Ichishiki",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baIssokutobi",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baNagiha",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baRin",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Kou",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "(hold)"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Issei Ougi: Sai",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Kachoufuugetsu Kai",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Axl Low",
+    "displayName": "AXL",
+    "img": "assets/char-imgs/axl.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Sickle Flash",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CBF.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baSoaring Chain Strike",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Up.png"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baSpinning Chain Strike",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baWinter Cherry",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Winter Mantis",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Snail",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Rainwater",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Axl Bomber",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Sickle Storm",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "One Vision",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Chipp Zanuff",
+    "displayName": "CHIPP",
+    "img": "assets/char-imgs/chipp.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 4",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Alpha Blade (Horizontal)",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Alpha Blade (Diagonal)",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Beta Blade",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Gamma Blade",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Resshou",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Rokusai",
+          "buttons": [
+            "(Resshou)",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Senshuu",
+          "buttons": [
+            "(Resshou or Rokusai)",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Genrouzan",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Shuriken",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Wall Run",
+          "buttons": [
+            "Hold",
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "dashing near corner"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baAttack",
+          "buttons": [
+            "any normal except",
+            "assets/command-imgs/GG-Button-Dust.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baEscape",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Left.png",
+            "or",
+            "assets/command-imgs/Arcade-Stick-Down.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Zansei Rouga",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Banki Messai",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Faust",
+    "displayName": "FAUST",
+    "img": "assets/char-imgs/faust.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Movement",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-DL.png",
+            "or",
+            "assets/command-imgs/Arcade-Stick-DR.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "during standing",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 4",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 5",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Dust.png",
+            "(hold)"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Mix Mix Mix",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "What Could This Be?",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Snip Snip Snip",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Scarecrow",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png",
+            "or",
+            "assets/command-imgs/GG-Button-Kick.png",
+            "or",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Thrust",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baPull Back",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Left.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baHole in One!",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Love",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Bone-crushing Excitement",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "W-W-What Could This Be?",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "W-W-What Could This Be?W-W-W-What Could This Be?",
+          "buttons": [
+            "assets/command-imgs/Arcade-Modifier-Max.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Giovanna",
+    "displayName": "GIOVANNA",
+    "img": "assets/char-imgs/giovanna.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Sepultura",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Trov\u00e3o",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Sol Nascente",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Sol Poente",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Ventania",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Tempestade",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "I-No",
+    "displayName": "I-NO",
+    "img": "assets/char-imgs/i-no.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Antidepressant Scale",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Chemical Love",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Stroke the Big Tree",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Stroke the Big TreeSultry Performance",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png",
+            "or",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "(hold)"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Megalomania",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Ultimate Fortissimo",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Ky Kiske",
+    "displayName": "KY",
+    "img": "assets/char-imgs/ky.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Stun Edge",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Charged Stun Edge",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Aerial Stun Edge",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Stun Dipper",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Foudre Arc",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Vapor Thrust",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Dire Eclat",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Ride the Lightning",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Sacred Edge",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Dragon Install",
+          "buttons": [
+            "(low health)",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Leo Whitefang",
+    "displayName": "LEO",
+    "img": "assets/char-imgs/leo.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 4",
+          "buttons": [
+            "hold far",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or standing",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 4Command Normal 5",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "while holding far",
+            "assets/command-imgs/GG-Button-Slash.png",
+            ", or",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "while holding standing",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Gravierte W\u00fcrde",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CBF.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Eisensturm",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CDU.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Estes Kaltes Gest\u00f6ber",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Zweites Kaltes Gest\u00f6ber",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Turbulenz",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Kahn-Schild",
+          "buttons": [
+            "(Brynhildr)",
+            "assets/command-imgs/GG-Button-Dust.png"
+          ]
+        },
+        {
+          "moveName": "Kahn-SchildGl\u00e4nzendes Dunkel",
+          "buttons": [
+            "(Brynhildr)",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Schildbrechen",
+          "buttons": [
+            "(Brynhildr)",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Cancel",
+          "buttons": [
+            "(Brynhildr)",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "assets/command-imgs/Arcade-Stick-Down.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Stahlwirbel",
+          "buttons": [
+            "(Brynhildr)",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Leidenschaft des Dirigenten",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "May",
+    "displayName": "MAY",
+    "img": "assets/char-imgs/may.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-DR.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 4",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Command Normal 5",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Mr. Dolphin (Horizontal)",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CBF.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Mr. Dolphin (Vertical)",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CDU.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Overhead Kiss",
+          "buttons": [
+            "(close)",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Arisugawa Sparkle",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png",
+            "or",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Great Yamada Attack",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Great Yamada AttackThe Wonderful and Dynamic Goshogawara",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Millia Rage",
+    "displayName": "MILLIA",
+    "img": "assets/char-imgs/millia.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Bad Moon",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Turbo Fall",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Tandem Top",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Iron Savior",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Mirazh",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Lust Shaker",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/Control-Modifier-Tap.png",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Kapel",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Winger",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Septem Voices",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Nagoriyuki",
+    "displayName": "NAGORIYUKI",
+    "img": "assets/char-imgs/nagoriyuki.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3Command Normal 4",
+          "buttons": [
+            "after far standing",
+            "assets/command-imgs/GG-Button-Slash.png",
+            ",",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baCommand Normal 5",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Zarameyuki",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Kamuriyuki",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Shizuriyuki",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Bloodsucking Universe",
+          "buttons": [
+            "(close)",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Fukyo",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "or",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Wasureyuki",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Zansetsu",
+          "buttons": [
+            "(Blood Rage)",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Potemkin",
+    "displayName": "POTEMKIN",
+    "img": "assets/char-imgs/potemkin.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Potemkin Buster",
+          "buttons": [
+            "(close)",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Heat Knuckle",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Mega Fist (Forward)",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Mega Fist (Backward)",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Slide Head",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Hammer Fall",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-CBF.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baBrake",
+          "buttons": [
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "F.D.B.",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Garuda Impact",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Heavenly Potemkin Buster",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Giganter Kai",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Ramlethal Valentine",
+    "displayName": "RAMLETHAL",
+    "img": "assets/char-imgs/ramlethal.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Bajoneto",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Dauro",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Sildo Detruo",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Sabrobato",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Erarlumo",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Agresa Ordono",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Calvados",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Mortobato",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Sol Badguy",
+    "displayName": "SOL",
+    "img": "assets/char-imgs/sol.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Gun Flame",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Gun Flame (Feint)",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Volcanic Viper",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Bandit Revolver",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Bandit Bringer",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Wild Throw",
+          "buttons": [
+            "(close)",
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Night Raid Vortex",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Fafnir",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Tyrant Rave",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Heavy Mob Cemetery",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Zato-1",
+    "displayName": "ZATO-1",
+    "img": "assets/char-imgs/zato-1.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 3",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Flight",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-Air.png",
+            "dash in any direction"
+          ]
+        },
+        {
+          "moveName": "Summon Eddie",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "\"Pierce\"",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "\"That's A Lot!\"",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "\"Leap\"",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "\"Oppose\"",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Invite Hell",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Break the Law",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Damned Fang",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Dp.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Drunkard Shade",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Amorphous",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Sun Void",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Goldlewis Dickinson",
+    "displayName": "GOLDLEWIS",
+    "img": "assets/char-imgs/goldlewis.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Behemoth Typhoon",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "half-circle in any direction",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Thunderbird",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Skyfish",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Down With The System",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Burn It Down",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Jack-O'",
+    "displayName": "JACK-O'",
+    "img": "assets/char-imgs/assets/char-imgs/gg-placeholder.jpg",
+    "moves": {
+      "command normals": [
+        {
+          "moveName": "Command Normal 1",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Command Normal 2",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ],
+      "special attacks": [
+        {
+          "moveName": "Summon Servant",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png",
+            "(hold)"
+          ]
+        },
+        {
+          "moveName": "Pick Up Servant",
+          "buttons": [
+            "(near servant)",
+            "assets/command-imgs/Arcade-Stick-Down.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "\u251c\u25baThrow Servant",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Right.png",
+            "+",
+            "any"
+          ]
+        },
+        {
+          "moveName": "\u2514\u25baRelease Servant",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/GG-Button-Dust.png"
+          ]
+        },
+        {
+          "moveName": "Recover",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Attack Command",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        },
+        {
+          "moveName": "Defend Command",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png"
+          ]
+        },
+        {
+          "moveName": "Countdown",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcb.png",
+            "+",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        },
+        {
+          "moveName": "Servant Shoot",
+          "buttons": [
+            "assets/command-imgs/Control-Modifier-%28Air%29.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Kick.png"
+          ]
+        }
+      ],
+      "overdrives": [
+        {
+          "moveName": "Forever Elysion Driver",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Hcbf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Punch.png"
+          ]
+        },
+        {
+          "moveName": "Cheer Servant On",
+          "buttons": [
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "assets/command-imgs/Arcade-Stick-Qcf.png",
+            "+",
+            "assets/command-imgs/GG-Button-Slash.png",
+            "or",
+            "assets/command-imgs/GG-Button-Heavy_Slash.png"
+          ]
+        }
+      ]
+    }
+  }
+]

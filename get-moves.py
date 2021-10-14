@@ -29,7 +29,6 @@ def findMoves(char, charMoves):
     for d in char.descendants:
         # Use the "style" key to determine if a <td> is a name or commands
         if d.name == "td" and d.has_attr("style"):
-            # print(f"{d}\n\n")
             if d['style'] == "text-align:left":
                 # If the move name (first element of contents) only has one element,
                 # it must be the whole name
@@ -43,6 +42,7 @@ def findMoves(char, charMoves):
                             moveName += " "
                         else:
                             moveName += i
+
             # Move commands/inputs
             elif d['style'] == "text-align:right":
                 command = []
@@ -56,7 +56,7 @@ def findMoves(char, charMoves):
                     # <small> and <a> do.
                     elif f.name is None and f.text != " ":
                         command.append((f.text).strip())
-                charMoves[moveType][moveName] = command
+                charMoves[moveType].append({"moveName" : moveName, "buttons" : command})
             elif d['style'] == "color:white;width:80px;vertical-align:top;text-align:center;font-size:18px;padding:3px;text-shadow: black 1px 1px 3px":
                 moveType = (d.text).lower().strip()
 
@@ -80,9 +80,9 @@ def generateCharMoveData(chars, setchars, chardir):
     while(count < len(setchars)):
         charName = setchars[count].contents[0]["id"].replace("_", " ")
         charMoves = {
-            "command normals": OrderedDict(),
-            "special attacks": OrderedDict(),
-            "overdrives": OrderedDict()}
+            "command normals": [],
+            "special attacks": [],
+            "overdrives": []}
 
         findMoves(setchars[count + 1], charMoves)
         findMoves(setchars[count + 2], charMoves)
@@ -92,7 +92,6 @@ def generateCharMoveData(chars, setchars, chardir):
 
         # Search for character's profile image
         for i in chardir:
-            # print(((i.split("/")[-1]).split(".")[0]).upper())
             if ((i.split("/")[-1]).split(".")[0]).upper() == displayName:
                 img = i
 
@@ -161,11 +160,13 @@ def main():
 
     for char in range(len(chars)):
         for v in chars[char]['moves'].values():  # Move types (dicts)
-            for v1 in v.values():  # Moves (lists)
-                for i in range(len(v1)):  # Commands (strs)
-                    if re.search(".png$", v1[i]):
-                        commandImgs.add(v1[i])
-                        v1[i] = f"assets/command-imgs/{v1[i].split('/')[-1]}"
+            for move in v:  # Moves (lists)
+                for i in range(len(move['buttons'])): # Buttons (strings)
+                    print(move['buttons'][i])
+                    if re.search(".png$", move['buttons'][i]):
+                        commandImgs.add(move['buttons'][i])
+                        move['buttons'][i] = f"assets/command-imgs/{move['buttons'][i].split('/')[-1]}"
+
 
     # Download all the command icons
     commandImgsPath = "assets/command-imgs"
