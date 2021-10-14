@@ -100,7 +100,7 @@ def generateCharMoveData(chars, setchars, chardir):
         chars.append({
             "fullName": charName,
             "displayName": displayName,
-            "img": img,
+            "img": "assets/char-imgs/" + img,
             "moves": charMoves
         })
 
