@@ -30,15 +30,16 @@
             </select>
             <label for="command-layout">Command Layout</label>
             <select name="command-layout" id="command-layout">
-                <option value="numpad">Numpad</option>
                 <option value="shapes">Shapes</option>
+                <option value="numpad">Numpad</option>
             </select>
         </section>
         <div id="main-content">
             <section class="panel" id="characters">
                 <h2 class="headline">Characters</h2>
-                <div class="menu" id="characterMenu">
-                    <form id="characterSelect" width="100px" height="100px">
+                <div class="menu" id="character-menu">
+                    <form id="character-select">
+                    <!-- <form id="character-select" width="100px" height="100px"> -->
                     </form>
                 </div>
             </section>
@@ -46,11 +47,11 @@
             <section class="panel" id="movelist">
                 <h2 class="headline">Move List</h2>
                 <ul>
-                    <li><a href="#command-normals" class="nav-link">Command Normals</a></li>
-                    <li><a href="#special-attacks" class="nav-link">Special Attacks</a></li>
-                    <li><a href="#overdrives" class="nav-link">Overdrives</a></li>
+                    <li><a href="#command-normals" class="move-link">Command Normals</a></li>
+                    <li><a href="#special-attacks" class="move-link">Special Attacks</a></li>
+                    <li><a href="#overdrives" class="move-link">Overdrives</a></li>
                 </ul>
-                <div class="menu" id="movelistMenu">
+                <div class="menu" id="movelist-menu">
                 </div>
             </section>
         </div>

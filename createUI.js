@@ -15,6 +15,8 @@ function addCharacter() {
 function createCharsList(chars) {
     chars.forEach(char => {
         const newLabel = document.createElement("label");
+        // const newLabel = document.createElement("div");
+        newLabel.htmlFor = char.displayName;
         const newRadio = document.createElement("input");
         newRadio.type = "radio";
         newRadio.name = "chars";
@@ -51,9 +53,9 @@ function createCharsList(chars) {
         newName.className = "bottom-left";
         newName.appendChild(newText);
         newLabel.appendChild(newName);
-        const newBreak = document.createElement("br");
-        newLabel.appendChild(newBreak);
-        const charSection = document.getElementById("characterSelect");
+        // const newBreak = document.createElement("br");
+        // newLabel.appendChild(newBreak);
+        const charSection = document.getElementById("character-select");
         console.log(`charSection: ${charSection}`);
         charSection.appendChild(newLabel);
     });
@@ -62,7 +64,7 @@ function createCharsList(chars) {
 
 function createMoveList(moves) {
     // console.log(moveList.moves);
-    const moveList = document.getElementById("movelistMenu");
+    const moveList = document.getElementById("movelist-menu");
     console.log(`movelist.innerHTML: ${movelist.innerHTML}`);
     moveList.innerHTML = "";
 
@@ -132,14 +134,17 @@ function createMoveList(moves) {
     // });
     let section = document.createElement("section");
     section.id = "command-normals";
+    section.className = "moveType";
     moveList.appendChild(section);
     section.appendChild(createMove(moves["command normals"], "Command Normals"));
     section = document.createElement("section");
     section.id = "special-attacks";
+    section.className = "moveType";
     moveList.appendChild(section);
     section.appendChild(createMove(moves["special attacks"], "Special Attacks"));
     section = document.createElement("section");
     section.id = "overdrives";
+    section.className = "moveType";
     moveList.appendChild(section);
     section.appendChild(createMove(moves["overdrives"], "Overdrives"));
     
