@@ -42,13 +42,13 @@ footer {
     background-color: chartreuse;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 740px) {
 }
 
-@media (min-width: 750px) {
+@media (min-width: 740px) {
     .menu {
         width: 100%;
-        height: 67vh;
+        height: 66vh;
         overflow-y: scroll;
     }
 
@@ -56,52 +56,39 @@ footer {
         /* border-left: 6px solid black; */
         margin-left: 20px;
         margin-right: 20px;
-        /* height: 100%; */
     }
 
     .char-thumbnail {
         /* base w&h: 106px, 105px */
         width: 201px;
         height: 200px;
-        /* display: block; */
+        display: block;
         margin: 0em;
+        padding: 0em;
         border: 15px solid;
         color: #ab5042;
     }
 
     #character-select {
-        /* width: 29vw;
-        height: 100%;*/
         background-color: darkgoldenrod;
         display: flex;
         flex-direction: column;
-        /* justify-content: flex-start; */
         flex-wrap: nowrap;
         align-items: center;
         gap: 0;
     }
 
     #character-menu {
-        width: 30vw;
-        height: 73vh;
-        /* display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        align-items: stretch;
-        gap: 0; */
+        width: 241px;
+        height: 72vh;
     }
-
-    /* #movelist {
-        width: 100%;
-    } */
 
     #movelist-menu {
         width: 60vw;
         background-color: chocolate;
     }
 
-    ul {
+    .move-nav {
         width: 60vw;
         margin: 0em;
         padding: 0em;
@@ -112,9 +99,8 @@ footer {
         list-style: none;
     }
 
-    li {
+    .move-nav-item {
         margin: 1em 0.5em;
-        /* color: white; */
     }
 
     .move-link {
@@ -128,12 +114,20 @@ footer {
 
 .bottom-left {
     position: absolute;
-    bottom: -18px;
+    bottom: 15px;
     left: 15px;
     color: white;
     background-color: rgba(0, 0, 0, 0.75);
     white-space: nowrap;
     font-size: 2em;
+    padding: 0em;
+    margin: 0em;
+}
+
+h3 {
+    margin-top: 0px;
+    color:rgb(151, 247, 180);
+    background-color: rgba(0, 0, 0);
 }
 
 #main-content {
@@ -146,10 +140,15 @@ label {
 }
 
 input[type="radio"] {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 
 .char-thumbnail:link {
+    color: green;
+}
+
+.selected {
     color: green;
 }
 

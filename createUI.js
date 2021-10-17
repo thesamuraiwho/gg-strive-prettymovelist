@@ -1,5 +1,6 @@
 // TODO: combine into ggStrive.json later
 let globalData = [];
+let selected = "ANJI";
 
 function addCharacter() {
     const newDiv = document.createElement("div");
@@ -99,17 +100,17 @@ function createMoveList(moves) {
             moveDiv.appendChild(buttons);
             // moveDiv.appendChild(document.createElement("br"));
     
-            if(move.followup) {
-                move.followup.forEach(fuMove => {
-                    const fuMoveName = document.createElement("p");
-                    fuMoveName.appendChild(document.createTextNode(`--> ${fuMove.moveName}`));
-                    moveDiv.appendChild(fuMoveName);
-                    const fuButtons = document.createElement("p");
-                    fuButtons.appendChild(document.createTextNode(`${fuMove.buttons}`));
-                    moveDiv.appendChild(fuButtons);
-                    // moveDiv.appendChild(document.createElement("br"));
-                });
-            }
+            // if(move.followup) {
+            //     move.followup.forEach(fuMove => {
+            //         const fuMoveName = document.createElement("p");
+            //         fuMoveName.appendChild(document.createTextNode(`--> ${fuMove.moveName}`));
+            //         moveDiv.appendChild(fuMoveName);
+            //         const fuButtons = document.createElement("p");
+            //         fuButtons.appendChild(document.createTextNode(`${fuMove.buttons}`));
+            //         moveDiv.appendChild(fuButtons);
+            //         // moveDiv.appendChild(document.createElement("br"));
+            //     });
+            // }
         });
 
         return moveDiv;
