@@ -1,4 +1,3 @@
-// TODO: combine into ggStrive.json later
 let globalData = [];
 let selected = "ANJI";
 
@@ -127,21 +126,6 @@ function createMoveList(moves) {
     //         });
     //     }
     // });
-    // let section = document.createElement("section");
-    // section.id = "command-normals";
-    // section.className = "moveType";
-    // moveList.appendChild(section);
-    // section.appendChild(createMove(moves["command normals"], "Command Normals"));
-    // section = document.createElement("section");
-    // section.id = "special-attacks";
-    // section.className = "moveType";
-    // moveList.appendChild(section);
-    // section.appendChild(createMove(moves["special attacks"], "Special Attacks"));
-    // section = document.createElement("section");
-    // section.id = "overdrives";
-    // section.className = "moveType";
-    // moveList.appendChild(section);
-    // section.appendChild(createMove(moves["overdrives"], "Overdrives"));
     addSection(moveList, "command-normals", createMove(moves["command normals"], "Command Normals"));
     addSection(moveList, "special-attacks", createMove(moves["special attacks"], "Special Attacks"));
     addSection(moveList, "overdrives", createMove(moves["overdrives"], "Overdrives"));
