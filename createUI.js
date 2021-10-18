@@ -71,6 +71,7 @@ function createMoveList(moves) {
 
     function createMove(moveCategory, category) {
         const moveDiv = document.createElement("div");
+        moveDiv.className = "commands";
         const categoryType = document.createElement("h3");
         categoryType.appendChild(document.createTextNode(`${category}`));
         moveDiv.appendChild(categoryType);
