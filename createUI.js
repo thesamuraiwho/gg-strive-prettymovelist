@@ -4,19 +4,18 @@ let selected = "ANJI";
 
 function addCharacter() {
     const newDiv = document.createElement("div");
-    console.log(`newDiv: ${newDiv}`);
+    // console.log(`newDiv: ${newDiv}`);
     const newContent = document.createTextNode("New character!");
-    console.log(`newContent: ${newContent}`);
+    // console.log(`newContent: ${newContent}`);
     newDiv.appendChild(newContent);
     const charSection = document.getElementById("characters");
-    console.log(`charSection: ${charSection}`);
+    // console.log(`charSection: ${charSection}`);
     charSection.appendChild(newDiv);
 }
 
 function createCharsList(chars) {
     chars.forEach(char => {
         const newLabel = document.createElement("label");
-        // const newLabel = document.createElement("div");
         newLabel.htmlFor = char.displayName;
         const newRadio = document.createElement("input");
         newRadio.type = "radio";
@@ -26,14 +25,14 @@ function createCharsList(chars) {
         newRadio.onclick = () => {
             if (newRadio.checked) {
                 // console.log(char.moves);
-                console.log(`globaldata: ${globalData}`);
+                // console.log(`globaldata: ${globalData}`);
                 for(let i = 0; i < globalData.length; i++) {
                     if (globalData[i].displayName === newRadio.value) {
-                        console.log(`globalData[${i}].displayName: ${globalData[i].displayName}\tnewRadio.value: ${newRadio.value}`);
+                        // console.log(`globalData[${i}].displayName: ${globalData[i].displayName}\tnewRadio.value: ${newRadio.value}`);
                         createMoveList(globalData[i].moves);
                     }
                 }
-                console.log(newRadio.value);
+                // console.log(newRadio.value);
             }
         };
 
@@ -54,19 +53,16 @@ function createCharsList(chars) {
         newName.className = "bottom-left";
         newName.appendChild(newText);
         newLabel.appendChild(newName);
-        // const newBreak = document.createElement("br");
-        // newLabel.appendChild(newBreak);
         const charSection = document.getElementById("character-select");
-        console.log(`charSection: ${charSection}`);
+        // console.log(`charSection: ${charSection}`);
         charSection.appendChild(newLabel);
     });
 }
 
 
 function createMoveList(moves) {
-    // console.log(moveList.moves);
     const moveList = document.getElementById("movelist-menu");
-    console.log(`movelist.innerHTML: ${movelist.innerHTML}`);
+    // console.log(`movelist.innerHTML: ${movelist.innerHTML}`);
     moveList.innerHTML = "";
 
     function createMove(moveCategory, category) {
@@ -81,25 +77,22 @@ function createMoveList(moves) {
             moveDiv.appendChild(moveName);
             const buttons = document.createElement("div");
 
-            console.log(move.buttons)
+            // console.log(move.buttons)
 
             // Create move button icons
             for(let i = 0; i < move.buttons.length; i++) {
                 if(move.buttons[i].match(/.png$/)){
-                    console.log(`Image ${move.buttons[i]}`);
+                    // console.log(`Image ${move.buttons[i]}`);
                     let img = document.createElement("img");
                     img.src = encodeURIComponent(move.buttons[i]);
                     buttons.appendChild(img);
                 } else {
-                    console.log(`Non-image ${move.buttons[i]}`);
+                    // console.log(`Non-image ${move.buttons[i]}`);
                     buttons.appendChild(document.createTextNode(`${move.buttons[i]}`));
                 }
             }
 
-
-            // buttons.appendChild(document.createTextNode(`${move.buttons}`));
             moveDiv.appendChild(buttons);
-            // moveDiv.appendChild(document.createElement("br"));
     
             // if(move.followup) {
             //     move.followup.forEach(fuMove => {
@@ -134,32 +127,35 @@ function createMoveList(moves) {
     //         });
     //     }
     // });
-    let section = document.createElement("section");
-    section.id = "command-normals";
-    section.className = "moveType";
-    moveList.appendChild(section);
-    section.appendChild(createMove(moves["command normals"], "Command Normals"));
-    section = document.createElement("section");
-    section.id = "special-attacks";
-    section.className = "moveType";
-    moveList.appendChild(section);
-    section.appendChild(createMove(moves["special attacks"], "Special Attacks"));
-    section = document.createElement("section");
-    section.id = "overdrives";
-    section.className = "moveType";
-    moveList.appendChild(section);
-    section.appendChild(createMove(moves["overdrives"], "Overdrives"));
-    
-    // moveList.appendChild(createMove(moves["command normals"], "Command Normals"));
-    // moveList.appendChild(createMove(moves["special attacks"], "Special Attacks"));
-    // moveList.appendChild(createMove(moves["overdrives"], "Overdrives"));
-    // const specialsDiv = document.createElement("div");
+    // let section = document.createElement("section");
+    // section.id = "command-normals";
+    // section.className = "moveType";
+    // moveList.appendChild(section);
+    // section.appendChild(createMove(moves["command normals"], "Command Normals"));
+    // section = document.createElement("section");
+    // section.id = "special-attacks";
+    // section.className = "moveType";
+    // moveList.appendChild(section);
+    // section.appendChild(createMove(moves["special attacks"], "Special Attacks"));
+    // section = document.createElement("section");
+    // section.id = "overdrives";
+    // section.className = "moveType";
+    // moveList.appendChild(section);
+    // section.appendChild(createMove(moves["overdrives"], "Overdrives"));
+    addSection(moveList, "command-normals", createMove(moves["command normals"], "Command Normals"));
+    addSection(moveList, "special-attacks", createMove(moves["special attacks"], "Special Attacks"));
+    addSection(moveList, "overdrives", createMove(moves["overdrives"], "Overdrives"));
 }
 
-// function createMoveList(char) {
-//     console.log(char.moves)
-//     // createMove(char.moves);
-// }
+
+function addSection(moveList, id, moves) {
+    let section = document.createElement("section");
+    section.id = id;
+    section.className = "moveType";
+    moveList.appendChild(section);
+    section.appendChild(moves);
+}
+
 
 async function fetchJson(filename, func) {
     let response = await fetch(filename);
@@ -168,12 +164,5 @@ async function fetchJson(filename, func) {
     func(data);
 }
 
-// addCharacter();
-
-// fetchJson("gg-strive-chars.json", createCharsList);
 fetchJson("gg-strive-data.json", createCharsList);
-fetchJson("gg-strive-data.json", console.log);
-
-// document.getElementsByName("chars").onclick = () => {
-//     console.log(`char selection: ${document.querySelector('input[name="chars"]:checked')}`);
-// }
+// fetchJson("gg-strive-data.json", console.log);
