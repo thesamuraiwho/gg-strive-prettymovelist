@@ -1,17 +1,20 @@
 :root {
     font-family: 'Open Sans', sans-serif;
+    --white: #f8f8f8;
+    --red: #7b1a1d;
+    --black: #191a1a;
 }
 
 header {
     position: fixed;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: var(--white);
     top: 0;
     left: 0;
 }
 
 body {
-    background-color: #f8f8f8;
+    background-color: var(--red);
 }
 
 footer {
@@ -19,17 +22,17 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: var(--white);
 }
 
 h3 {
     margin-top: 0px;
-    color:#f8f8f8;
-    background-color: #191a1a;
+    color: var(--white);
+    background-color: var(--black);
 }
 
 .headline {
-    color: #f8f8f8;
+    color: var(--white);
 }
 
 label {
@@ -42,11 +45,11 @@ input[type="radio"] {
 }
 
 .char-thumbnail:link {
-    color: #f8f8f8;
+    color: var(--white);
 }
 
 input[type="radio"]:checked + img{
-    color: #f8f8f8;
+    color: var(--white);
 }
 
 div .commands{
@@ -58,7 +61,7 @@ main {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: #7b1a1d;
+    background-color: var(--red);
 }
 
 #main-content {
@@ -70,14 +73,14 @@ main {
     margin: 0em;
     padding: 0em;
     border: 15px solid;
-    color: #191a1a;
+    color: var(--black);
 }
 
 .bottom-left {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: #f8f8f8;
+    color: var(--white);
     background-color: rgba(26, 26, 26, 0.75);
     white-space: nowrap;
     padding: 0em;
@@ -85,15 +88,15 @@ main {
 }
 
 .move-link {
-    background-color: #191a1a;
-    color: #f8f8f8;
+    background-color: var(--black);
+    color: var(--white);
     border-radius: 10px;
     padding: 10px;
     text-decoration: none;
 }
 
 #character-select {
-    background-color: #191a1a;
+    background-color: var(--black);
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -108,7 +111,7 @@ main {
 }
 
 #movelist-menu {
-    background-color: #f8f8f8;
+    background-color: var(--white);
 }
 
 /* Width */
@@ -118,12 +121,12 @@ main {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #191a1a;
+    background: var(--black);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #f8f8f8;
+    background: var(--white);
 }
 
 /* Handle on hover */
@@ -131,7 +134,96 @@ main {
     background: #767878;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 480px) {
+    main {
+        top: 60px;
+    }
+
+    #main-content {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .headline {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        font-size: 1.25em;
+    }
+
+    h1 {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+    }
+
+    #disclaimer {
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+
+    .separator {
+        display: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .char-thumbnail {
+        width: 106px;
+        height: 105px;
+    }
+
+    #character-menu {
+        width: 100%;
+        height: 152px;
+        overflow-x: scroll;
+    }
+
+    #characters {
+        width: 100%;
+    }
+
+    #movelist {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #movelist-menu {
+        width: 100%;
+        height: 30vh;
+        overflow-y: scroll;
+    }
+
+    .move-nav {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .move-nav-item {
+        margin: 0.1em 0.1em;
+        padding: 0em;
+    }
+
+    .move-link {
+        margin: 0em 0.1em;
+        padding: 0.1em;
+        font-size: 0.75em;
+    }
+
+    .bottom-left {
+        font-size: 1em;
+    }
+
+    div .commands{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 740px) {
     main {
         top: 60px;
     }
@@ -192,6 +284,7 @@ main {
         width: 90%;
         justify-content: space-evenly;
         flex-wrap: nowrap;
+        margin: 10px;
     }
 
     .move-nav-item {
